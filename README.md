@@ -270,7 +270,9 @@
       </li>    
     </ul>
   </li>
-  ![IMG_0710](https://github.com/Programming-Notes-all-languages/Computer-Organization/assets/154717520/b78893b2-73c5-4cf0-8756-41598f54318e)
+</ul>  
+![IMG_0710](https://github.com/Programming-Notes-all-languages/Computer-Organization/assets/154717520/b78893b2-73c5-4cf0-8756-41598f54318e)
+<ul>  
   <li>
     <a>The process that represents how a computer's CPU executes instructions is defined as the <em>fetch-decode-execute cycle</em>. The following will explain how this process works</a>
     <ul>
