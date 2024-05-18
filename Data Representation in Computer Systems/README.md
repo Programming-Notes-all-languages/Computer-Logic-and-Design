@@ -64,7 +64,7 @@
           </li>  
           <li>
             <a>The most significant bit is the leftmost bit. In an eight-bit number, the bit representing 2<sup>7</sup> is the most significant bit. This bit may store 0 or 1; if the bit stores 0, then 0 is the most significant bit</a>
-          <li>  
+          </li>  
         </ul>  
       </li>  
       <li>
