@@ -32,7 +32,8 @@
   </li>
   <li>
     <a>The least significant digit is the rightmost digit with the lowest weight</a>
-  </li>      
+  </li>  
+  <li>    
     <a>There are four very popular positional number systems:</a>
     <ul>
       <li>
@@ -58,6 +59,12 @@
           <li>
             <a>The largest number of bits that a number system with n digits can have is 2<sup>n</sup> - 1</a>
           </li>  
+          <li>
+            <a>The least significant bit is the rightmost bit of the binary number</a>
+          </li>  
+          <li>
+            <a>The most significant bit is the leftmost bit. In an eight-bit number, the bit representing 2<sup>7</sup> is the most significant bit. This bit may store 0 or 1; if the bit stores 0, then 0 is the most significant bit</a>
+          <li>  
         </ul>  
       </li>  
       <li>
