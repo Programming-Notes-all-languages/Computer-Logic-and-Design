@@ -12,7 +12,7 @@
   </li>
   <li>
     <a href='#measures-of-capacity-and-processor-speed'>Measures of Capacity and Processor Speed</a>
-  </li> 
+  </li>
   <li>
     <a href='#the-von-nuemann-model'>The von Nuemman Model</a>
   </li>  
@@ -21,6 +21,7 @@
   </li>
 </ol>
 </details>
+
 
 ## The Main Components of a Computer
 <ul>
@@ -48,6 +49,7 @@
     </ul>
   </li>      
 </ul>
+
 
 ## Moore's Law and Rock's Law
 <ul>
@@ -80,6 +82,7 @@
     <a>For Moore's Law to hold, Rock's Law must no longer persist or vic versa</a>
   </li>  
 </ul>  
+
 
 ## The Computer Level Hierarchy
 ![Untitled-Diagram95](https://github.com/Programming-Notes-all-languages/Computer-Organization/assets/154717520/72e6eade-2bbe-4098-85b7-21dd9e3b5279)
@@ -197,6 +200,7 @@
   </li>                          
 </ul>  
 
+
 ## Measures of Capacity and Processor Speed
 <ul>
   <li>
@@ -243,6 +247,7 @@
   </li>      
 </ul>  
 
+
 ## The von Nuemann Model
 <ul>
   <li>
@@ -266,7 +271,7 @@
         <a>Ability to process instructions in a sequential manner</a>
       </li>
       <li>
-        <a>There is lastly a single path between the control unit of the CPU and the main memory. This single path is called the <em>von Neumann bottleneck</em></a>
+        <a>There is lastly a single path between the control unit of the CPU and the main memory. This single path is called the <em>von Neumann bottleneck. This path is a bidirectional path between the CPU's control unit and the system's main memory</em></a>
       </li>    
     </ul>
   </li>
@@ -282,18 +287,15 @@
         <a>The other registers may be holding values, such as int x or even float y</a>
       </li>
       <li>
-        <a>The fetching happens when the computer takes the address of the next instruction and passes it through the arithmetic-logic unit. From there, the instruction is then sent to the control unit. The control unit then comes out of the CPU and then goes to the main memory. Within main memory, the computer is going to look for that address and if it is found, the information stored at that memory address will be pulled out. That information is then sent back to the control unit</a>
+        <a>The fetching happens when the computer takes the address of the next instruction and passes it through the arithmetic-logic unit. From there, the instruction is then sent to the control unit. The instructions then come out of the CPU and then go to the main memory. Within main memory, the computer is going to look for that address and if it is found, the information stored at that memory address will be pulled out. That information is then sent back to the control unit</a>
       </li>    
       <li>
-        <a>The decoding then takes place after the fetching is complete. What information is now in the control unit is just a series of ones and zeros. The control unit will make sense of the instructions that it receives from the main memory. Afterward, this information is sent to the ALU</a>
+        <a>The decoding then takes place after the fetching is complete. The control unit will make sense of the instructions that it receives from the main memory. Afterward, this information is sent to the ALU</a>
       </li>
       <li>
-        <a>Execute then takes place after the information is sent to the ALU. For example, if the information represented in bits really means to add two variables together, then the ALU will perform that summation. Afterward, the information can be passed to the input/output system if told so by the computer. Additionally, the new information could be sent back to the registers where some number of the registers are now updated with new information. Another possibility is that the information is sent back to the control unit where it gets sent to memory and the main memory is updated with the new information</a>
+        <a>Execute then takes place after the information is sent to the ALU. For example, if the information represented in bits really means to add two variables together, then the ALU will perform that summation. Afterward, the new information could be sent back to the registers where some number of the registers are now updated with new information. Another possibility is that the information is sent back to the control unit where it gets sent to memory and the main memory is updated with the new information</a>
       </li>  
     </ul>  
-  </li>  
-  <li>
-    <a>The von Neumann bottleneck occurs at each arrow within the model above--except for the bidirectional arrow connecting the ALU and the input/output system. The path from the ALU to the to the registers, the path from the registers to the ALU, the bidirectional path between the ALU and control unit, and lastly the bidirectional path between the control unit and the main memory are all subject to the bottleneck</a>
   </li>  
   <li>
     <a>System Bus Model</a>
@@ -303,18 +305,19 @@
       <a>There are three busses associated with the bus model:</a>
       <ul>
         <li>
-          <a>Data bus: moves data between components on the motherboard. This bus is bidirectional with respect to the CPU, main memory, and input/output system</a>
+          <a>Data bus: moves data between main memory and registers. This bus is bidirectional with respect to the CPU and main memory</a>
         </li>
         <li>
-          <a>Address bus: holds specific addresses from the main memory location and transports those addresses. It sends these addresses from the CPU to the memory and to the input/output system. The address bus is single-directional for the CPU, main memory, and input/output system</a>
+          <a>Address bus: holds the addresses of the data that the data bus is currently processing. The address bus is single-directional for the CPU and for the main memory. The address bus passes addresses one way only: from the CPU to main memory</a>
         </li>
         <li>
-          <a>Control bus: carries the necessary control signals, e.g. electricity, pulses, frequencies, etc., between the CPU, main memory, and input/output system. The control bus is bidirectional for the CPU, main memory, and input/output system</a>
+          <a>Control bus: carries the necessary control signals, e.g. electricity, pulses, frequencies, etc., which are needed for the CPU to communicate with hardware components of the computer. The control bus is bidirectional for the CPU and main memory</a>
         </li>    
       </ul>    
     </li>
   </ul>      
 </ul>    
+
 
 ## Non-von Nuemann Model
 <ul>
