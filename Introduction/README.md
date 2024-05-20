@@ -27,6 +27,11 @@
 <ul>
   <li>
     <a><em>Computer organization</em> consists of the physical components of a computer, such as the computer's hardware. It is concerned with the way the computer's hardware is connected to make a computer</a>
+    <ul>
+      <li>
+        <a>Examples include the computer's circuit design, control signals, and memory types</a>
+      </li>
+    </ul>    
   </li>
   <li>
     <a><em>Computer architecture</em> consists of the logical implementations of the computer's design, known as the computer's software</a>
@@ -271,7 +276,7 @@
         <a>Ability to process instructions in a sequential manner</a>
       </li>
       <li>
-        <a>There is lastly a single path between the control unit of the CPU and the main memory. This single path is called the <em>von Neumann bottleneck. This path is a bidirectional path between the CPU's control unit and the system's main memory</em></a>
+        <a>There is lastly a single path between the control unit of the CPU and the main memory. This single path is called the <em>von Neumann bottleneck</em>. This path is a bidirectional path between the CPU's control unit and the system's main memory</a>
       </li>    
     </ul>
   </li>
