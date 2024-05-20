@@ -43,7 +43,7 @@
     <a>The necessary components to build a computer system consist of the following components:</a>
     <ul>
       <li>
-        <a>A <em>processor</em>, known as the central processing unit, is needed to understand and run programs</a>
+        <a>A <em>processor</em>, known as the central processing unit, is needed to understand, interpret, and run, execute, programs</a>
       </li>
       <li>
         <a>A <em>memory</em> stores programs and information within the computer</a>
@@ -51,10 +51,12 @@
       <li>
         <a>Mechanisms for <em>data input and output</em> which transfers information from the user, to the computer, and then to the user again</a>
       </li>
+      <li>
+        <a>Computers follow step by step instructions which are called <em>algorithms</em></a>
+      </li> 
     </ul>
   </li>      
 </ul>
-
 
 ## Moore's Law and Rock's Law
 <ul>
@@ -96,7 +98,7 @@
     <a>Level 6: The User Level</a>
     <ul>
       <li>
-        <a>This level is composed of the applications that the user uses, such as Microsoft Word, video games, etc.</a>
+        <a>This level is composed of the applications that the user uses, such as Microsoft Word, video games, etc. The user here executes the programs and this stage is known as the user interface level</a>
       <li>
         <a>This is the level that humans are most familiar with</a>
       </li>
@@ -109,10 +111,10 @@
     <a>Level 5: High-Level Language Level</a>
     <ul>
       <li>
-        <a>This is the level that consists of high-level languages like C, C++, Python, etc</a>
+        <a>This is the level that consists of high-level languages like C, C++, Python, etc. The user interacts with this level when coding in high-level languages like the ones listed above</a>
       </li>
       <li>
-        <a>These languages must then be translated into a language that the computer can understand. High-level languages are translated into assembly languages which makes machine code</a>
+        <a>The compilation of C gode, running the gcc command, produces assembly code which will then be interpreted by level four</a>
       </li>
       <li>
         <a>The user at the higher level sees very little of all levels below itself</a>
@@ -123,7 +125,7 @@
     <a>Level 4: Assembly Language Level</a>
     <ul>
       <li>
-        <a>At this level, all high-level languages are translated into assembly languages</a>
+        <a>At this level, the computer acts upon the assembly language that the high-level language produced during the code's compilation</a>
       </li>
     </ul>
   </li>
@@ -134,21 +136,24 @@
         <a>At this level, operating system instructions, which are programs that the central processing unit executes, are dealt with</a>
       </li>
       <li>
-        <a>This level also translates assembly languages into machine language</a>
+        <a>Assembly language code often passes through this stage without any modification</a>
       </li>
+      <li>
+        <a>This stage manages system resources</a>
+      </li>  
     </ul>
   </li>
   <li>
     <a>Level 2: Machine Level</a>
     <ul>
       <li>
-        <a>This level is also known as the Instruction Set Architecture (ISA) Level</a>
+        <a>This level is also known as the Instruction Set Architecture (ISA) Level. This ISA is a model that defines how the CPU is controlled by its ISA software</a>
       </li>
       <li>
         <a>This stage consists of the instructions that are particular to the computer's architecture. This means that these instructions are understandable to the computer's hardware</a>
       </li>
       <li>
-        <a>These instructions are written in machine code which do not further need to be reduced to be understood by the computer's architecture</a>
+        <a>These instructions are written in machine code which do not further need to be reduced to be understood by the computer's architecture. Therefore, there is no need for compilers and intepreters. Machine code is a low-level programming language comprising of bits with values of 0 and 1</a>
       </li>  
       <li>
         <a>This stage represents the point where the system's organization and architecture meet and interact</a>
@@ -159,7 +164,7 @@
     <a>Level 1: Control Level</a>
     <ul>
       <li>
-        <a>This level contains the <em>control unit</em> which makes sure that the instructions given to the computer are executed properly and that data is moved to the correct places</a>
+        <a>This level contains the <em>control unit</em> which makes sure that the instructions given to the computer are decoded and executed properly</a>
       <li>
         <a>Control units can be either <em>hardwired</em> or they can be microprogrammed</em></a>
       </li>
@@ -179,10 +184,7 @@
           <a>Microprogrammed control units:</a>
           <ul>
             <li>
-              <a>A microprogram is a program that is written in a low-level language that is executed by a computer's architecture</a>
-            </li>
-            <li>
-              <a>The machine code that was translated in level two is fed into the microprogram</a>
+              <a>A microprogram is a program that is written in a low-level language that is executed by a computer's hardware</a>
             </li>
             <li>
               <a>The microprogram control unit is responsible for generating control signals, such as electricity</a>
@@ -199,12 +201,14 @@
     <a>Level 0: Digital Logic Level</a>
     <ul>
       <li>
-        <a>This level consists of the gates and wires of the computer</a>
+        <a>This level consists of the digital circuits inside of the computer, also known as the computer's chips. These chips consists of gates and wires</a>
       </li>
+      <li>
+        <a>The chips implement mathematical logic</a>
+      </li>  
     </ul>
   </li>                          
 </ul>  
-
 
 ## Measures of Capacity and Processor Speed
 <ul>
