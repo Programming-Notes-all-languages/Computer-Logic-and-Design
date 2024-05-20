@@ -150,10 +150,10 @@
         <a>This level is also known as the Instruction Set Architecture (ISA) Level. This ISA is a model that defines how the CPU is controlled by its ISA software</a>
       </li>
       <li>
-        <a>This stage consists of the instructions that are particular to the computer's architecture. This means that these instructions are understandable to the computer's hardware</a>
+        <a>This stage consists of the instructions that are particular to the computer's architecture. These instructions are written in machine code which do not further need to be reduced to be understood by the computer's architecture. In other words, the computer's hardware will understand these instructions as they are written in machine code</a>
       </li>
       <li>
-        <a>These instructions are written in machine code which do not further need to be reduced to be understood by the computer's architecture. Therefore, there is no need for compilers and intepreters. Machine code is a low-level programming language comprising of bits with values of 0 and 1</a>
+        <a>Machine code is a low-level programming language comprising of bits with values of 0 and 1</a>
       </li>  
       <li>
         <a>This stage represents the point where the system's organization and architecture meet and interact</a>
