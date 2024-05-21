@@ -247,7 +247,7 @@
 | pebibyte | PiB | 2<sup>50</sup> |
 | exbibyte | EiB | 2<sup>60</sup> |
 | zebibyte | ZiB | 2<sup>70</sup> |
-| yobibyte | YiB | 2<sup>80</sup>> |  
+| yobibyte | YiB | 2<sup>80</sup> |  
 
 
 | | Measures of Processor | |
