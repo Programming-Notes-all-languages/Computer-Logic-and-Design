@@ -31,11 +31,22 @@
       <li>
         <a>Examples include the computer's circuit design, control signals, and memory types</a>
       </li>
+      <li>
+        <a>Computer organization is concerned with how the computer works</a>
+      </li>  
     </ul>    
   </li>
   <li>
-    <a><em>Computer architecture</em> consists of the logical implementations of the computer's design, known as the computer's software</a>
+    <a><em>Computer architecture</em> consists of the logical implementations of the computer's design as seen by the coder, known as the computer's software</a>
+    <ul>
+      <li>
+        <a>Computer architecture is concerned with how the computer is designed</a>
+      </li>
+    </ul>    
   </li>
+  <li>
+    <a>There is no clear distinction between processes related to computer architecture and computer organization. Computer scientists and computer engineers hold differing views as to what is computer architecture and what is computer organization. Computer architecture cannot exist without computer organization and vice versa</a>
+  </li>  
   <li>
     <a><em>Principle of Equivalence of Hardware and Software</em>: defines that any task that can be accomplished by software can be done using only hardware and vice versa</a>
   </li>
@@ -43,7 +54,7 @@
     <a>The necessary components to build a computer system consist of the following components:</a>
     <ul>
       <li>
-        <a>A <em>processor</em>, known as the central processing unit, is needed to understand, interpret, and run, execute, programs</a>
+        <a>A <em>processor</em>, known as the central processing unit, is needed to understand, interpret, and execute, programs</a>
       </li>
       <li>
         <a>A <em>memory</em> stores programs and information within the computer</a>
@@ -53,10 +64,11 @@
       </li>
       <li>
         <a>Computers follow step by step instructions which are called <em>algorithms</em></a>
-      </li> 
+      </li>
     </ul>
   </li>      
 </ul>
+
 
 ## Moore's Law and Rock's Law
 <ul>
@@ -86,7 +98,7 @@
     </ul>  
   </li>
   <li>
-    <a>For Moore's Law to hold, Rock's Law must no longer persist or vic versa</a>
+    <a>For Moore's Law to hold, Rock's Law must no longer persist or vice versa</a>
   </li>  
 </ul>  
 
@@ -114,7 +126,7 @@
         <a>This is the level that consists of high-level languages like C, C++, Python, etc. The user interacts with this level when coding in high-level languages like the ones listed above</a>
       </li>
       <li>
-        <a>The compilation of C gode, running the gcc command, produces assembly code which will then be interpreted by level four</a>
+        <a>The compilation of C code, running the gcc command, produces assembly code which will then be interpreted by level four</a>
       </li>
       <li>
         <a>The user at the higher level sees very little of all levels below itself</a>
@@ -147,7 +159,7 @@
     <a>Level 2: Machine Level</a>
     <ul>
       <li>
-        <a>This level is also known as the Instruction Set Architecture (ISA) Level. This ISA is a model that defines how the CPU is controlled by its ISA software</a>
+        <a>This level is also known as the Instruction Set Architecture (ISA) Level. This ISA is a model that defines how the CPU is controlled by its ISA software. The ISA is the interface between the software that runs the machine and the hardware that executes it</a>
       </li>
       <li>
         <a>This stage consists of the instructions that are particular to the computer's architecture. These instructions are written in machine code which do not further need to be reduced to be understood by the computer's architecture. In other words, the computer's hardware will understand these instructions as they are written in machine code</a>
@@ -184,7 +196,7 @@
           <a>Microprogrammed control units:</a>
           <ul>
             <li>
-              <a>A microprogram is a program that is written in a low-level language that is executed by a computer's hardware</a>
+              <a>A microprogram is a program that is written in a low-level language that is implemented by a computer's hardware</a>
             </li>
             <li>
               <a>The microprogram control unit is responsible for generating control signals, such as electricity</a>
@@ -201,7 +213,7 @@
     <a>Level 0: Digital Logic Level</a>
     <ul>
       <li>
-        <a>This level consists of the digital circuits inside of the computer, also known as the computer's chips. These chips consists of gates and wires</a>
+        <a>This level consists of the digital circuits inside of the computer, also known as the computer's chips. These chips consist of gates and wires</a>
       </li>
       <li>
         <a>The chips implement mathematical logic</a>
@@ -210,51 +222,68 @@
   </li>                          
 </ul>  
 
+
 ## Measures of Capacity and Processor Speed
+| | Measures of Capacity | |
+| :---: | :---: | :---: |
+| **Decimal term** | **Abbreviation** | **Value (bytes)** |
+| kilobyte | KB | 10<sup>3</sup> |
+| megabyte | MG | 10<sup>6</sup> |
+| gigabyte | GB | 10<sup>9</sup> |
+| terabyte | TB | 10<sup>12</sup> |
+| petabyte | PB | 10<sup>15</sup> |
+| exabyte | EB | 10<sup>18</sup> |
+| zettabyte | ZB | 10<sup>21</sup> |
+| yottabyte | YB | 10<sup>24</sup> |
+
+
+| | Measures of Capacity | |
+| :---: | :---: | :---: |
+| **Binary term** | **Abbreviation** | **Value (bytes)** |
+| kibibyte | KB | 2<sup>10</sup> |
+| mebibyte | MiG | 2<sup>20</sup> |
+| gibibyte | GiB | 2<sup>30</sup> |
+| tebibyte | TiB | 2<sup>40</sup> |
+| pebibyte | PiB | 2<sup>50</sup> |
+| exbibyte | EiB | 2<sup>60</sup> |
+| zebibyte | ZiB | 2<sup>70</sup> |
+| yobibyte | YiB | 2<sup>80</sup>> |  
+
+
+| | Measures of Processor | |
+| :---: | :---: | :---: |
+| **Term** | **Abbreviation** | **Value (Hz)** |
+| kilohertz | KHz | 10<sup>3</sup> |
+| megahertz | MHz | 10<sup>6</sup> |
+| gigahertz | GHz | 10<sup>9</sup> |
+| terahertz | THz | 10<sup>12</sup> |
+| petahertz | PHz | 10<sup>15</sup> |
+| exahertz | EHz | 10<sup>18</sup> |
+| zettahertz | ZHz | 10<sup>21</sup> |
+| yottahertz | YHz | 10<sup>24</sup> |
+
+
 <ul>
   <li>
-    <a>Measures of capacity in decimal terms:</a>
-    <ul>
-      <li>
-        <a>Kilobyte (KB): 10<sup>3</sup> bytes</a>
-      </li>
-      <li>
-        <a>Megabyte (MB): 10<sup>6</sup> bytes<a>
-      </li>
-      <li>
-        <a>Gigabyte (GB): 10<sup>9</sup> bytes</a>
-      </li>  
-      <li>
-        <a>Terabyte (KB): 10<sup>12</sup> bytes</a>
-      </li>
-    </ul>
+    <a>Hertz is a measure of cycles per second. The number of cycles per second is also known as frequency</a>
   </li>
   <li>
-    <a>Measures of capacity in binary terms:</a>
-    <ul>
-      <li>
-        <a>Kibibyte (KiB): 2<sup>10</sup> bytes</a>
-      </li>
-      <li>
-        <a>Kibibyte (KiB): 2<sup>20</sup> bytes</a>
-      </li>
-      <li>
-        <a>Gibibyte (GiB): 2<sup>30</sup> bytes</a>
-      </li>
-      <li>
-        <a>Tebibyte (TiB): 2<sup>40</sup> bytes</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a>Measures of processor speed:</a>
-    <ul>
-      <li>
-        <a>Hertz = (clock cycles) / second --> this is also known as frequency</a>
-      </li>
-    </ul>
-  </li>      
-</ul>  
+    <a>Processor speeds are measured in MHz, but currently, processors are now measured in GHz</a>
+  </li>  
+</ul>
+
+
+| | Measures of Time/Space | |
+| :---: | :---: | :---: |
+| **Prefix** | **Abbreviation** | **Value** |
+| milli | m | 10<sup>-3</sup> |
+| micro | &mu; | 10<sup>-6</sup> |
+| nano | n | 10<sup>-9</sup> |
+| pico | p | 10<sup>-12</sup> |
+| femto | f | 10<sup>-15</sup> |
+| atto | a | 10<sup>-18</sup> |
+| zepto | z | 10<sup>-21</sup> |
+| yocto | y | 10<sup>-24</sup> |
 
 
 ## The von Nuemann Model
@@ -263,10 +292,18 @@
     <a>The stored-program concept outlines that all stored-program computers have all of the following characteristics:</a>
     <ul>
       <li>
-        <a>Consists of the three architecture systems:</a>
+        <a>Consists of all three of following hardware systems:</a>
         <ul>
           <li>
             <a>A <em>central processing unit</em> containing a control unit, <em>arithmetic logic unit (ALU)</em>, and <em>registers</em></a>
+            <ul>
+              <li>
+                <a>The arithmetic logic unit performs arithmetic operations, addition, subtraction, multiplication, and division, and logical operations on binary numbers</a>
+              </li>  
+              <li>
+                <a>Registers are small storage containers within the CPU that store data and instructions during the execution of processes by the CPU</a>
+              </li>
+            </ul>  
           </li>
           <li>
             <a>A <em>main memory system</em> stores data and programs that are being executed by the computer's CPU</a>
@@ -284,25 +321,20 @@
       </li>    
     </ul>
   </li>
-   
+
+
 ![IMG_0710](https://github.com/Programming-Notes-all-languages/Computer-Organization/assets/154717520/b78893b2-73c5-4cf0-8756-41598f54318e)
   <li>
-    <a>The process that represents how a computer's CPU executes instructions is defined as the <em>fetch-decode-execute cycle</em>. The following will explain how this process works</a>
+    <a>The process that represents how a computer's CPU executes instructions is defined as the <em>fetch-decode-execute cycle</em>. This cycle is also called the <em>von Neumann execution cycle</em>. The following will explain how this process works</a>
     <ul>
       <li>
-        <a>The beginning of this model is within the registers, specifically the program counter. The program counter is a special register that holds the data is the computer's next instruction</a>
-      </li>
-      <li>
-        <a>The other registers may be holding values, such as int x or even float y</a>
-      </li>
-      <li>
-        <a>The fetching happens when the computer takes the address of the next instruction and passes it through the arithmetic-logic unit. From there, the instruction is then sent to the control unit. The instructions then come out of the CPU and then go to the main memory. Within main memory, the computer is going to look for that address and if it is found, the information stored at that memory address will be pulled out. That information is then sent back to the control unit</a>
+        <a>Fetch: the beginning of this model is within the registers, specifically the program counter. The program counter is a special register that holds the data is the computer's next instruction. The other registers may be holding values, such as int x or even float y. The fetching happens when the CPU retrieves instructions from the main memory. The instruction is typically stored within a register in the CPU that is called the program counter. The instruction address travels from the program counter to the ALU, to then the control unit. The instructions then come out of the CPU and then go to the main memory. Within main memory, the computer is going to look for that address and if it is found, the information stored at that memory address will be pulled out. That information is then sent back to the control unit</a>
       </li>    
       <li>
-        <a>The decoding then takes place after the fetching is complete. The control unit will make sense of the instructions that it receives from the main memory. Afterward, this information is sent to the ALU</a>
+        <a>Decoding: takes place after the fetching is complete. The control unit will make sense of the instructions that it receives from the main memory. In other words, the control unit will decode the information. This process involves identifying what operations need to be performed. This step also identifies any additional operands that are needed to execute the instruction. If additional operands for an instruction are needed, then a fetch operand cycle occurs. Here, the control unit sends a bus to get the address of the additional instruction from the main memory. Once the address is found, the address is sent to the control unit, then the ALU, then to the additional registers in the CPU--not the program counter register</a>
       </li>
       <li>
-        <a>Execute then takes place after the information is sent to the ALU. For example, if the information represented in bits really means to add two variables together, then the ALU will perform that summation. Afterward, the new information could be sent back to the registers where some number of the registers are now updated with new information. Another possibility is that the information is sent back to the control unit where it gets sent to memory and the main memory is updated with the new information</a>
+        <a>Execute: takes place after the information is sent to the ALU. If any data is needed from the registers to complete that instruction, then the ALU will fetch that data and execute the instruction using that data. For example, if the information represented in bits really means to add two variables together, then the ALU will perform that summation. Afterward, the new information could be sent back to the registers where some number of the registers are now updated with new information or main memory. The ALU essentially executes the instructions which were made legible to the ALU by the control unit during decoding</a>
       </li>  
     </ul>  
   </li>  
@@ -331,7 +363,7 @@
 ## Non-von Nuemann Model
 <ul>
   <li>
-    <a>Improvements in computation power require some deviation from the conventional von Nuemann model. These improvements primarily take place in the form of <em>parallel processing</em> which refers to a vast collection of different computer architectures such as the following:</a>
+    <a>Improvements in computation power require some deviation from the conventional von Neumann model. These improvements primarily take place in the form of <em>parallel processing</em> which refers to a vast collection of different computer architectures such as the following:</a>
     <ul>
       <li>
         <a>Multiple computers working together on a task</a>
