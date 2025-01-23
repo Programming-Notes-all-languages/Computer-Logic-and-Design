@@ -492,21 +492,15 @@ This process represents how a computer's CPU executes instructions. This cycle i
       </li>  
       <li>The control unit will interpret the instruction to determine what operation needs to be performed</li>
       <li>The control unit identifies an operation code that specifies the operation to perform. This tells the control unit what kind of operation the ALU must perform</li>
-      <li>The control unit identifies any operands needed for the operation, which could be values that need to be processed or addresses where data is located. If the instruction requires additional operands that are not immediately available (they are stored in memory or other registers), the control unit will begin another fetch cycle; however, this will be an operand fetch cycle that does not increment the program counter</li>
-      <li>If additional operands for an instruction are needed: 
-        <ul>
-          <li>The control units sends a memory address using an address bus to fetch the operands from main memory or from a register</li>
-          <li>If the operand is in main memory, the address is sent to memory and the corresponding data is fetched</li>
-          <li>Once the operand data is located (in memory or a register), it is sent back to the control unit for final instruction processing. The data may travel via the ALU and then to appropriate registers, but not the program counter. The program counter is only updated during the fetch phase to point to the address of the next instruction</li>
-        </ul>
+      <li>The control unit identifies any operands needed for the operation, which could be values that need to be processed or addresses where data is located</li>
       <li>The fetched operand(s) are placed in the appropriate register(s) within the CPU, which could be a general-purpose register or a special register</li>
-      <li>Once the control unit has decoded the instruction and fetched any necessary operands, the instruction is not ready for the execute phase</li>
+      <li>Once the control unit has decoded the instruction and fetched any necessary operands, the decoded instructions enable the generation of control signals that are not yet sent the input and output devices. The instruction is now ready for the execute phase</li>
     </ol>
   </li>
   <li>Execute
     <ol>
-      <li>The control unit uses the decoded information to generate control signals that orchestrate the execution phase. These signals dictate how the CPU will perform the required operation</li>
-      <li>If operands are stored in registers, the control unit directs the ALU to access the appropriate registers. If an operand was fetched during the decode phase, it is already in the CPU's registers</li>
+      <li>The generated control signals become activated and enable to computer's hardware to perform the calculations. These signals dictate how the CPU will perform the required operation</li>
+      <li>If operands are stored in registers, the control unit directs the ALU to access the appropriate registers</li>
       <li>The ALU then performs the operation and processes operands from registers or memory. If a result is computed, it is stored in a register or written back to memory</li>
     </ol>
   </li>
