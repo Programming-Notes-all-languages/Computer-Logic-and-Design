@@ -395,8 +395,8 @@ $\quad$ 7: (0111)<sub>2</sub><br />
 
 There is a symmetric range of represented values from:
   
-$-2$<sup>
-n - 1</sup> $ <= n <= 2$<sup>
+$-(2$<sup>
+n - 1</sup> $)<= n <= 2$<sup>
 n - 1</sup> $- 1$</li>
 
 <details>
