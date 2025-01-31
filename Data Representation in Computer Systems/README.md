@@ -310,8 +310,7 @@ $\quad$ 5: (0101)<sub>2</sub><br />
 $\quad$ 6: (0110)<sub>2</sub><br />
 $\quad$ 7: (0111)<sub>2</sub><br />
 
-The  number range for n bits in sign-magnitude representation is $-(2$<sup>
-$n - 1$</sup> $- 1)<= n <= 2$<sup>
+The  number range for n bits in sign-magnitude representation is $-(2$ <sup>$n - 1$</sup> $- 1)<= n <= 2$<sup>
 $n - 1$</sup> $- 1$</li>
 
 <ul>
