@@ -317,8 +317,8 @@ The  number range for n bits in sign-magnitude representation is $-(2$ <sup>n - 
   <li>There is a symmetric range of represented values from:
   
 $-(2$<sup>
-$n - 1$</sup> $- 1)<= n <= 2$<sup>
-$n - 1$</sup> $- 1$</li>
+n - 1</sup> $- 1)<= n <= 2$<sup>
+n - 1</sup> $- 1$</li>
   <li>It is hard to implement addition and subtraction when doing arithmetic using binary signed-magnitude representations</li>
 </ul>  
 
@@ -349,8 +349,8 @@ $\quad$ 7: (0111)<sub>2</sub><br />
 There is a symmetric range of represented values from:
   
 $-(2$<sup>
-$n - 1$</sup> $- 1)<= n <= 2$<sup>
-$n - 1$</sup> $- 1$</li>
+n - 1</sup> $- 1)<= n <= 2$<sup>
+n - 1</sup> $- 1$</li>
 
 <details>
     <summary>Example problem</summary>
@@ -396,8 +396,8 @@ $\quad$ 7: (0111)<sub>2</sub><br />
 There is a symmetric range of represented values from:
   
 $-2$<sup>
-$n - 1$</sup> $ <= n <= 2$<sup>
-$n - 1$</sup> $- 1$</li>
+n - 1</sup> $ <= n <= 2$<sup>
+n - 1</sup> $- 1$</li>
 
 <details>
     <summary>Example problem</summary>
