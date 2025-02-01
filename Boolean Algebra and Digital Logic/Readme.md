@@ -1,0 +1,501 @@
+<details>
+<summary>Table of Contents</summary>
+<ol>
+  <li>
+    <a href='#boolean-function-representation'>Boolean Function Representation</a>
+  </li>
+  <li>
+    <a href='#logic-gates-and-digital-components'>Logic Gates and Digital Components</a>
+  </li>
+</ol>
+</details>
+
+## Boolean Function Representation
+There are many ways to represent a given boolean function
+<ul>
+  <li>Truth table</li>
+  <li>Boolean expressions
+    <ul>
+      <li>The <strong>sum-of-products form</strong> is where ANDed variables are ORed together, e.g., $F(x, y, z) = xy + yz + xz$</li>
+      <li>The <strong>sum-of-products form</strong> is where ORed variables are ANDed together: $F(x, y, z) = (x + y)(y + z)(x + z)</li>
+    </ul>
+  </li>
+  <li>Two boolean expression that can be represented by the same truth table are considered <strong>logically equivalent</strong></li>
+</ul>
+
+<h2 style="text-align:center;">Boolean Algebra Laws</h2>
+<table>
+        <tr>
+            <th>#</th>
+            <th>Law Name</th>
+            <th>Expression</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Identity Law</td>
+            <td>A + 0 = A, A · 1 = A</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Null (Domination) Law</td>
+            <td>A + 1 = 1, A · 0 = 0</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Idempotent Law</td>
+            <td>A + A = A, A · A = A</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Complement Law</td>
+            <td>A + A' = 1, A · A' = 0</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Double Negation</td>
+            <td>(A')' = A</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Commutative Law</td>
+            <td>A + B = B + A, A · B = B · A</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Associative Law</td>
+            <td>(A + B) + C = A + (B + C), (A · B) · C = A · (B · C)</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Distributive Law</td>
+            <td>A · (B + C) = A · B + A · C</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Absorption Law</td>
+            <td>A + (A · B) = A, A · (A + B) = A</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>De Morgan's Theorems</td>
+            <td>(A · B)' = A' + B', (A + B)' = A' · B'</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Redundancy (Consensus) Law</td>
+            <td>A · B + A' · C + B · C = A · B + A' · C</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Absorption (Simplified)</td>
+            <td>A + A · B = A</td>
+        </tr>
+    </table>
+
+In order to eliminate confusion, designers express boolean functions in <strong>canonical</strong> form:
+<ul>
+  <li><strong>Canonical sum-of-product form</strong> is the sum of minterms $(\sum m)$</li>
+  <li><strong>Canonical product-of-sum form</strong> is the produce of maxterms $(\Pi m)$</li>
+</ul>
+
+<strong>Minterm</strong> is a logical product of all the literals, each literal may be or without the bar. The output result of the minterm function is 1
+
+<strong>Maxterm</strong> is a logical sum of all the literals, each literal may be with or without the bar. The output result of maxterm function is 0
+
+<details>
+    <summary>Example problem</summary>
+
+Write the minterm and maxterm for a function $F(x, y, z) when $x = 0, y = 1,$ and $z = 0$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+Minterm: $x'yz'$<br />
+Maxterm: $x + y' + z$
+</details> 
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Simplify the following function and show its truth table values:
+
+<div align="center">
+
+$F(x, y, z) = x'yz' + x'yz + xy'z' + xyz' + xyz = \sum m(2, 3, 4, 6, 7)$</div>
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+$F(x, y, z) = x'y(z' + z) + x(y'z' + yz' + yz)$<br />
+$F(x, y, z) = x'y + x(z'(y' + y) + yz)$<br />
+$F(x, y, z) = x'y + x(z' + yz)$<br />
+$F(x, y, z) = x'y + xz' + xyz$<br />
+$F(x, y, z) = y(x' + xz) + xz'$<br />
+$F(x, y, z) = y(x' + z) + xz'$<br />
+$F(x, y, z) = x'y + yz + xz'$<br /><br />
+
+<table border="1">
+  <tr>
+    <th>$x$</th>
+    <th>$y$</th>
+    <th>$z$</th>
+    <th>$F(x, y, z) = x'y + yz + xz'$</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+The maxterm representation of the function is the following: $F(x, y, z) = (x + y + z)(x + y + z')(x' + y + z') = \Pi(0, 1, 5)$
+</details> 
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+The truth table for a boolean expression is shown below. Write the boolean expression in canonical sum-of-product form and canonical product-of-sum form
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+Sum-of-product form: $F(x, y, z) = x'y'z' + x'yz' + xy'z + xyz' + xyz$
+Product of sum form: $F(x, y, z) = (x + y + z')(x + y' + z')(x' + y + z)$
+</details> 
+</ul>  
+</details>
+
+## Logic Gates and Digital Components
+A logic gate implements a simple boolean operation where a collection of gates form an integrated circuit
+
+<table>
+    <thead>
+        <tr>
+            <th>Gate</th>
+            <th>Symbol</th>
+            <th>Truth Table</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- AND Gate -->
+        <tr>
+            <td>AND</td>
+            <td><img src="Images/Logic Gates/AND.png" alt="AND Gate Symbol" width="120" height="60"></td>
+            <td>
+                <table>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </table>
+            </td>
+        </tr>
+        <!-- OR Gate -->
+        <tr>
+            <td>OR</td>
+            <td><img src="Images/Logic Gates/OR.png" alt="OR Gate Symbol" width="120" height="60"></td>
+            <td>
+                <table>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </table>
+            </td>
+        </tr>
+        <!-- NOT Gate -->
+        <tr>
+            <td>NOT</td>
+            <td><img src="Images/Logic Gates/NOT.png" alt="NOT Gate Symbol" width="120" height="60"></td>
+            <td>
+                <table>
+                    <tr><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td></tr>
+                </table>
+            </td>
+        </tr>
+        <!-- NAND Gate -->
+        <tr>
+            <td>NAND</td>
+            <td><img src="Images/Logic Gates/NAND.png" alt="NAND Gate Symbol" width="120" height="60"></td>
+            <td>
+                <table>
+                    <tr><td>0</td><td>0</td><td>1</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>0</td></tr>
+                </table>
+            </td>
+        </tr>
+        <!-- NOR Gate -->
+        <tr>
+            <td>NOR</td>
+            <td><img src="Images/Logic Gates/NOR.png" alt="NOR Gate Symbol" width="120" height="60"></td>
+            <td>
+                <table>
+                    <tr><td>0</td><td>0</td><td>1</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>0</td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>XOR</td>
+            <td><img src="Images/Logic Gates/XOR.png" alt="XOR Gate Symbol" width="120" height="60"></td>
+            <td>
+                <table>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>0</td></tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<details>
+    <summary>Example problem</summary>
+
+Indicate the output of the circuits shown below for the given input signals
+<img src="Images/Example Problems/Problem 1.png" alt="Problem 1">
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li>R = 1</li>
+  <li>S = 0</li>
+</ol>  
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Construct the input/output table for the following circuit
+<img src="Images/Example Problems/Problem 2.png" alt="Problem 2">
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<table>
+    <thead>
+        <tr>
+            <th>$P$</th>
+            <th>$Q$</th>
+            <th>$R$</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Indicate the output of the circuits shown below for the given input signals
+<img src="Images/Example Problems/Problem 3.png" alt="Problem 3">
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li>$(P \vee Q) \land \neg(P \land Q)$</li>
+  <li>$(P \land Q) \land \neg R$</li>
+</ol>  
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Construct circuits for the following Boolean expressions:
+<ol type="a">
+  <li>$(\neg P \land Q) \vee \neg Q$</li>
+  <li>$((P \land Q) \land (R \land S)) \land T$</li>
+</ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol>
+  <li><img src="Images/Example Problems/Problem 4a.png" alt="Problem 4a"></li>
+  <li><img src="Images/Example Problems/Problem 4b.png" alt="Problem 4b"></li>
+</ol>
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Design a circuit for the following input/output table:
+<table>
+    <thead>
+        <tr>
+            <th>$P$</th>
+            <th>$Q$</th>
+            <th>$R$</th>
+            <th>$S$</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+$(P \land Q \land R) \vee (P \land \neg Q \land R) \vee (P \land \neg Q \land \neg R)$
+</details>
+</ul>  
+</details>
+
+Two digital logic circuits are <strong>equivalent</strong> if, and only if, their input/output tables are identical
+
+<details>
+    <summary>Example problem</summary>
+
+Show that $((P \land \neg Q) \vee (P \land Q)) \land Q$ and $P \land Q$ are logically equivalent using boolean algebra
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+$\equiv ((P \land \neg Q) \vee (P \land Q)) \land Q$
+
+$\equiv (P \land (Q \vee \neg Q)) \land Q \quad$ Distributive Property 
+
+$\equiv (P \land t) \land Q \quad$ Negation Law
+
+$\equiv P \land Q \quad$ Identity Law
+</details>
+</ul>  
+</details>
+
+It can be shown that any Boolean expression is equivalent to one written entirely with Sheffer strokes or entirely with Peirce arrows
+The output of the nand gate with two inputs, $P$ and $Q$, has an output that can be represented by the following: $R = P \mid Q$
+The output of the nor gate with two inputs, $P$ and $Q$, has an output that can be represented by the following: $R = P \downarrow Q$
+
+### Universal Gates
+NAND and NOR are known as <strong>universal gates</strong> as any boolean function can be constructed using only NAND or only NOR gates
