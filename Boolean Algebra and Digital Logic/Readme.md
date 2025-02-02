@@ -7,6 +7,9 @@
   <li>
     <a href='#logic-gates-and-digital-components'>Logic Gates and Digital Components</a>
   </li>
+  <li>
+    <a href='#combinational-circuits'>Combinational Circuits</a>
+  </li>
 </ol>
 </details>
 
@@ -493,9 +496,98 @@ $\equiv P \land Q \quad$ Identity Law
 </ul>  
 </details>
 
-It can be shown that any Boolean expression is equivalent to one written entirely with Sheffer strokes or entirely with Peirce arrows
-The output of the nand gate with two inputs, $P$ and $Q$, has an output that can be represented by the following: $R = P \mid Q$
-The output of the nor gate with two inputs, $P$ and $Q$, has an output that can be represented by the following: $R = P \downarrow Q$
-
 ### Universal Gates
 NAND and NOR are known as <strong>universal gates</strong> as any boolean function can be constructed using only NAND or only NOR gates
+
+## Combinational Circuits
+Digital logic circuits can be categorized as:
+<ul>
+  <li>Combinational circuits</li>
+  <li>Sequential circuits</li>
+</ul>
+
+Combinational logic is used to build circuits that contain basic boolean operators, inputs, and outputs. An output in a combinational circuit is always based entirely on the given inputs
+
+### Half-Adder
+A half-adder is a typical combinational circuit that is used to add two binary digits together
+
+The truth table reveals that:
+<ul>
+  <li>The sum is actually an XOR gate</li>
+  <li>The carry is equivalent to an AND gate</li>
+</ul>  
+
+<img src="Images/Logic Gates/HALF ADDER.png" alt="Half Adder">
+
+### Full-Adder
+A full-adder allows for three inputs, $x$, $y$, and carry-in, and two outputs, sum and carry-out
+
+<img src="Imaged/Logic Gates/FULL ADDER.png" alt="Full Adder">
+
+The sum of a full-adder is equal to $A \oplus B \oplus C$<sub>in</sub>
+
+The $C$<sub>out</sub> is $((A \oplus B) * C$<sub>in</sub>$) + A * B$
+
+### Ripple-Carry Adder
+One limitation of a full-adder is that it can add only three bits. Full adders can be connected ins series to add binary numbers. This type of circuit is called a <strong>ripple-carry adder</strong> because of the sequential generation of carries that ripple through the adder stages
+
+<img src="Images/Logic Gates/RIPPLE CARRY ADDER.png" alt="Ripple Carry Adder">
+
+### Decoders
+Decoders are used to decode binary information from a set of $n$ inputs to a maximum of $2$<sup>n</sup> outputs
+
+#### 3-8 Decoder Truth Table
+<table>
+        <tr>
+            <th>x</th>
+            <th>y</th>
+            <th>z</th>
+            <th>D0</th>
+            <th>D1</th>
+            <th>D2</th>
+            <th>D3</th>
+            <th>D4</th>
+            <th>D5</th>
+            <th>D6</th>
+            <th>D7</th>
+        </tr>
+        <tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+    </table>
+
+<details>
+    <summary>Example problem</summary>
+
+Draw the decoder $\Pi m(0, 3, 7)$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 1.png" alt="Problem 5">
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Draw the decoder $\sum m(2, 4, 6)$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 1.png" alt="Problem 6">
+</details>
+</ul>  
+</details>
+
+### Multiplexers
+A multiplexer (MUX) is a digital logic circuit that selects one of the several input signals and forwards the selected input to a single output line
+
+<img src="Images/Logic Gates/MULTIPLEXER.png" alt="Multiplexer">
