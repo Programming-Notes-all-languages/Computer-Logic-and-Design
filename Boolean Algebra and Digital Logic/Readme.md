@@ -522,7 +522,7 @@ The truth table reveals that:
 ### Full-Adder
 A full-adder allows for three inputs, $x$, $y$, and carry-in, and two outputs, sum and carry-out
 
-<img src="Imaged/Logic Gates/FULL ADDER.png" alt="Full Adder" width="300" height="150">
+<img src="Images/Logic Gates/FULL ADDER.png" alt="Full Adder" width="300" height="150">
 
 The sum of a full-adder is equal to $A \oplus B \oplus C$<sub>in</sub>
 
