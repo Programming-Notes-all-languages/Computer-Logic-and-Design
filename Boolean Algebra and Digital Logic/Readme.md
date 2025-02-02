@@ -517,12 +517,12 @@ The truth table reveals that:
   <li>The carry is equivalent to an AND gate</li>
 </ul>  
 
-<img src="Images/Logic Gates/HALF ADDER.png" alt="Half Adder">
+<img src="Images/Logic Gates/HALF ADDER.png" alt="Half Adder" width="300" height="150">
 
 ### Full-Adder
 A full-adder allows for three inputs, $x$, $y$, and carry-in, and two outputs, sum and carry-out
 
-<img src="Imaged/Logic Gates/FULL ADDER.png" alt="Full Adder">
+<img src="Imaged/Logic Gates/FULL ADDER.png" alt="Full Adder" width="300" height="150">
 
 The sum of a full-adder is equal to $A \oplus B \oplus C$<sub>in</sub>
 
@@ -531,7 +531,7 @@ The $C$<sub>out</sub> is $((A \oplus B) * C$<sub>in</sub>$) + A * B$
 ### Ripple-Carry Adder
 One limitation of a full-adder is that it can add only three bits. Full adders can be connected ins series to add binary numbers. This type of circuit is called a <strong>ripple-carry adder</strong> because of the sequential generation of carries that ripple through the adder stages
 
-<img src="Images/Logic Gates/RIPPLE CARRY ADDER.png" alt="Ripple Carry Adder">
+<img src="Images/Logic Gates/RIPPLE CARRY ADDER.png" alt="Ripple Carry Adder" width="300" height="150">
 
 ### Decoders
 Decoders are used to decode binary information from a set of $n$ inputs to a maximum of $2$<sup>n</sup> outputs
@@ -590,4 +590,4 @@ Draw the decoder $\sum m(2, 4, 6)$
 ### Multiplexers
 A multiplexer (MUX) is a digital logic circuit that selects one of the several input signals and forwards the selected input to a single output line
 
-<img src="Images/Logic Gates/MULTIPLEXER.png" alt="Multiplexer">
+<img src="Images/Logic Gates/MULTIPLEXER.png" alt="Multiplexer" width="300" height="150">
