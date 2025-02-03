@@ -304,6 +304,10 @@ A logic gate implements a simple boolean operation where a collection of gates f
     </tbody>
 </table>
 
+Here are two more equivalences involving XOR:<br />
+$x \oplus 1 = x'$<br />
+$x \oplus 0 = x$
+
 <details>
     <summary>Example problem</summary>
 
@@ -524,7 +528,7 @@ A full-adder allows for three inputs, $x$, $y$, and carry-in, and two outputs, s
 
 <img src="Images/Logic Gates/FULL ADDER.png" alt="Full Adder" width="300" height="150">
 
-The sum of a full-adder is equal to $A \oplus B \oplus C$<sub>in</sub>
+The sum of a full-adder is equal to $(A \oplus B) \oplus C$<sub>in</sub>
 
 The $C$<sub>out</sub> is $((A \oplus B) * C$<sub>in</sub>$) + A * B$
 
