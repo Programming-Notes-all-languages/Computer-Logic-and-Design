@@ -265,6 +265,9 @@ Answer: (162733.506)<sub>8</sub>
 </ul>  
 </details>
 
+<details>
+    <summary>Example problem</summary>
+
 Convert the unsigned (11001)<sub>2</sub> to hexadecimal
 <ul>  
   <details>
@@ -623,14 +626,13 @@ Represent decimal 115 in sign-magnitude representation, one's complement represe
 ### Carry and Overflow
 Carry is important when adding and subtracting unsigned integers and indicates that the unsigned sum is out of range
 
-Overflow is important when adding and subtracting signed integers. Indicates that the signed sum is out of range. Overflow occurs when:
+Overflow is important when adding and subtracting signed integers. Indicates that the signed sum is out of range. Overflow occurs in signed-magnitude arithmetic when:
 <ul>
   <li>Adding two positive numbers and the sum is negative</li>
   <li>Adding two negative numbers and the sum is positive</li>
-  <li>Can happen because of the fixed number of sum bits</li>
 </ul>  
 
-Overflow occurs when carry in sign does not equal carry out sign:
+For two's complement arithmetic, overflow occurs when the carry in bit is not equal to the carry out bit
 
 <details>
     <summary>Example problem</summary>
