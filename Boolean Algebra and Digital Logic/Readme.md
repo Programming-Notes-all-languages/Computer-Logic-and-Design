@@ -101,6 +101,58 @@ In order to eliminate confusion, designers express boolean functions in <strong>
   <li><strong>Canonical product-of-sum form</strong> is the produce of maxterms $(\Pi m)$</li>
 </ul>
 
+<details>
+    <summary>Example problem</summary>
+
+Write the boolean expression in canonical sum-of-product form and canonical product-of-sum form for the following boolean functions by not creating truth tables:
+<ol>
+  <li>
+  
+  $f(a, b, c, d) = ab' + bc'd + acd$</li>
+  <li>
+
+  $f(a, b, c, d) = (a' + b)(b + c' + d)(a + d')$</li>
+</ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol>
+
+  <li>
+  
+  $f(a, b, c, d) = ab' + bc'd + acd$<br />
+  
+  Sum-of-product form: <br />
+  $f(a, b, c, d) = ab'(c + c')(d + d') + bc'd(a + a') + acd(b + b')$<br />
+
+  $f(a, b, c, d) = ab'cd + ab'cd' + ab'c'd + ab'c'd' + abc'd + a'bc'd + abcd$<br />
+
+  $\sum m(5, 8, 9, 10, 11, 13, 15)$<br />
+  <br />Product-of-sum form:<br />
+  
+  $\Pi M(0, 1, 2, 3, 4, 6, 7, 12, 14)$<br />
+  $f(a, b, c, d) = (a + b + c + d)(a + b + c + d')(a + b + c' + d)(a + b + c' + d')(a + b' + c + d)(a + b' + c' + d)(a + b' + c' + d')(a' + b' + c + d)(a' + b' + c' + d)$</li>
+  <li>
+
+  $f(a, b, c, d) = (a' + b)(b + c' + d)(a + d')$<br />
+
+  Sum-of-product form:<br />
+
+  $f(a, b, c, d) = a'bc'd' + a'bcd' + a'b'c'd' + abc'd' + abc'd + abcd' + abcd$<br />
+
+  $\sum m(0, 4, 6, 12, 13, 14, 15)$<br />
+
+  Product-of-sum form:<br />
+
+  $f(a, b, c, d) = (a' + b + c' + d')(a' + b + c' + d)(a' + b + c + d')(a' + b + c + d)(a + b + c' + d)(a + b' + c' + d')(a + b' + c + d')(a + b + c' + d')(a + b + c + d')$<br />
+
+  $\Pi M(1, 2, 3, 5, 7, 8, 9, 10, 11)$
+</ol>   
+</details> 
+</ul>  
+</details>
+
 <strong>Minterm</strong> is a logical product of all the literals, each literal may be or without the bar. The output result of the minterm function is 1
 
 <strong>Maxterm</strong> is a logical sum of all the literals, each literal may be with or without the bar. The output result of maxterm function is 0
@@ -108,7 +160,7 @@ In order to eliminate confusion, designers express boolean functions in <strong>
 <details>
     <summary>Example problem</summary>
 
-Write the minterm and maxterm for a function $F(x, y, z) when $x = 0, y = 1,$ and $z = 0$
+Write the minterm and maxterm for a function $F(x, y, z)$ when $x = 0, y = 1,$ and $z = 0$
 <ul>  
   <details>
     <summary>Solution</summary>
@@ -196,20 +248,6 @@ $F(x, y, z) = x'y + yz + xz'$<br /><br />
   </tr>
 </table>
 The maxterm representation of the function is the following: $F(x, y, z) = (x + y + z)(x + y + z')(x' + y + z') = \Pi(0, 1, 5)$
-</details> 
-</ul>  
-</details>
-
-<details>
-    <summary>Example problem</summary>
-
-The truth table for a boolean expression is shown below. Write the boolean expression in canonical sum-of-product form and canonical product-of-sum form
-<ul>  
-  <details>
-    <summary>Solution</summary>
-
-Sum-of-product form: $F(x, y, z) = x'y'z' + x'yz' + xy'z + xyz' + xyz$
-Product of sum form: $F(x, y, z) = (x + y + z')(x + y' + z')(x' + y + z)$
 </details> 
 </ul>  
 </details>
