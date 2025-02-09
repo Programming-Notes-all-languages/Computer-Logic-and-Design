@@ -174,6 +174,41 @@ Maxterm: $x + y' + z$
 <details>
     <summary>Example problem</summary>
 
+Write the boolean expression in canonical sum-of-product form and canonical product-of-sum form for the following:
+$\sum m(1, 2, 5, 6)$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 9A.png" alt="Problem 9A">
+</details> 
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Write the boolean expression in canonical sum-of-product form and canonical product-of-sum form for the following:
+<ol>
+  <li>
+
+  $f(a, b, c, d) = ab' + bc'd + acd$</li>
+  <li>
+
+  $f(a, b, c, d) = (a' + b)(b + c' + d)(a + d')$</li>
+<ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 10A.png" alt="Problem 10A">
+</details> 
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
 Simplify the following function and show its truth table values:
 
 <div align="center">
@@ -633,3 +668,30 @@ Draw the decoder $\sum m(2, 4, 6)$
 A multiplexer (MUX) is a digital logic circuit that selects one of the several input signals and forwards the selected input to a single output line
 
 <img src="Images/Logic Gates/MULTIPLEXER.png" alt="Multiplexer" width="300" height="150">
+
+<details>
+    <summary>Example problem</summary>
+
+Find the boolean expression F<br />
+<img src="Images/Example Problems/Problem 7.png" alt="Problem 7">
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 7A.png" alt="Problem 7A">
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Design a 2 x 1 MUX for $F(a, b) = a'b + ab$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 8A.png" alt="Problem 8A">
+</details>
+</ul>  
+</details>
