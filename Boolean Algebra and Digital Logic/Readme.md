@@ -213,7 +213,7 @@ Simplify the following function and show its truth table values:
 
 <div align="center">
 
-$F(x, y, z) = x'yz' + x'yz + xy'z' + xyz' + xyz = \sum m(2, 3, 4, 6, 7)$</div>
+$F$ $($ $x$ $,$ $y$ $,$ $z$ $)$ $=$ $x$ $'$ $y$ $z$ $'$ $+$ $x$ $'$ $y$ $z$ $+$ $x$ $y$ $'$ $z$ $'$ $+$ $x$ $y$ $z$ $'$ $+$ $x$ $y$ $z$ $=$ $\sum$ $m$ $($ $2$ $,$ $3$ $,$ $4$ $,$ $6$ $,$ $7$ $)$</div>
 <ul>  
   <details>
     <summary>Solution</summary>
