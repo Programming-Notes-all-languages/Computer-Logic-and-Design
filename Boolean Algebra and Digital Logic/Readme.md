@@ -147,7 +147,9 @@ Write the boolean expression in canonical sum-of-product form and canonical prod
 
   $f(a, b, c, d) = (a' + b + c' + d')(a' + b + c' + d)(a' + b + c + d')(a' + b + c + d)(a + b + c' + d)(a + b' + c' + d')(a + b' + c + d')(a + b + c' + d')(a + b + c + d')$<br />
 
-  $\Pi M(1, 2, 3, 5, 7, 8, 9, 10, 11)$
+  $\Pi M(1, 2, 3, 5, 7, 8, 9, 10, 11)$</li>
+
+  <img src="Images/Example Problems/Problem 10A.png" alt="Problem 10A">
 </ol>   
 </details> 
 </ul>  
@@ -185,26 +187,7 @@ $\sum m(1, 2, 5, 6)$
 </ul>  
 </details>
 
-<details>
-    <summary>Example problem</summary>
 
-Write the boolean expression in canonical sum-of-product form and canonical product-of-sum form for the following:
-<ol>
-  <li>
-
-  $f(a, b, c, d) = ab' + bc'd + acd$</li>
-  <li>
-
-  $f(a, b, c, d) = (a' + b)(b + c' + d)(a + d')$</li>
-<ol>  
-<ul>  
-  <details>
-    <summary>Solution</summary>
-
-<img src="Images/Example Problems/Problem 10A.png" alt="Problem 10A">
-</details> 
-</ul>  
-</details>
 
 <details>
     <summary>Example problem</summary>
@@ -596,6 +579,10 @@ The truth table reveals that:
 
 <img src="Images/Logic Gates/HALF ADDER.png" alt="Half Adder" width="300" height="150">
 
+The sum of the half-adder is equal to $A \oplus B$
+
+The $C$ is $A \land B$
+
 ### Full-Adder
 A full-adder allows for three inputs, $x$, $y$, and carry-in, and two outputs, sum and carry-out
 
@@ -692,6 +679,27 @@ Design a 2 x 1 MUX for $F(a, b) = a'b + ab$
     <summary>Solution</summary>
 
 <img src="Images/Example Problems/Problem 8A.png" alt="Problem 8A">
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+<ol>
+  <li>
+  
+  Write the CSOP of $Z$<sub>2</sub> expressed with $\sum$ in variables $A, B, C$</li>
+  <li>
+  
+  Write the CSOP of $f(A, B, C, D)$ expressed with $\sum$</li>
+</ol>  
+<img src="Images/Example Problems/Problem 9.png" alt="Problem 9">
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 9A.png" alt="Problem 9A">
 </details>
 </ul>  
 </details>
