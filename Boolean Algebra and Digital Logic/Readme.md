@@ -95,6 +95,18 @@ There are many ways to represent a given boolean function
         </tr>
     </table>
 
+<details>
+    <summary>Example problem</summary>
+
+Simplify $B1 + (((AD)' + D'C)A)'$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+</details> 
+</ul>  
+</details>
+
 In order to eliminate confusion, designers express boolean functions in <strong>canonical</strong> form:
 <ul>
   <li><strong>Canonical sum-of-product form</strong> is the sum of minterms $(\sum m)$</li>
@@ -186,8 +198,6 @@ $\sum m(1, 2, 5, 6)$
 </details> 
 </ul>  
 </details>
-
-
 
 <details>
     <summary>Example problem</summary>
@@ -694,12 +704,12 @@ Design a 2 x 1 MUX for $F(a, b) = a'b + ab$
   
   Write the CSOP of $f(A, B, C, D)$ expressed with $\sum$</li>
 </ol>  
-<img src="Images/Example Problems/Problem 9.png" alt="Problem 9">
+<img src="Images/Example Problems/Problem 11.png" alt="Problem 9">
 <ul>  
   <details>
     <summary>Solution</summary>
 
-<img src="Images/Example Problems/Problem 9A.png" alt="Problem 9A">
+<img src="Images/Example Problems/Problem 11A.png" alt="Problem 9A">
 </details>
 </ul>  
 </details>
