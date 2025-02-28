@@ -743,7 +743,7 @@ The flip-flop can hold the value of one or zero, until the clock changes.
 
 The SR flip-flop has three inputs: S, R, and its current output Q(t)
 
-<img src="Images/Logic Gates/SRFlIPFLOP.png" alt="SR Flip-FLop" width="300" height="150">
+<img src="Images/Logic Gates/SR FlIP-FLOP.png" alt="SR Flip-FLop" width="300" height="150">
 
 ### JK Flip-Flops
 The SR flip-flop can be modified to provide a stable state when S and R inputs are both 1; this modified flip-flop is called a JK flip-flop
@@ -762,19 +762,19 @@ The D flip-flop is another variant of the SR flip-flop
   <li>
   
   Write out the truth table for the future control signal of Q<sub>A</sub>(t + 1) and Q<sub>B</sub>(t + 1) for a given A, B, and X<br />
-  <img src="Images/Logic Gates/Problem 12.png" alt="Problem 12"></li>
+  <img src="Images/Example Problems/Problem 12.png" alt="Problem 12"></li>
   <li>
   
   Write out the truth table for the future control signal of Q<sub>A</sub>(t + 1) and Q<sub>B</sub>(t + 1) for a given A, B, and X<br />
-  <img src="Images/Logic Gates/Problem 13.png" alt="Problem 13"></li>
+  <img src="Images/Example Problems/Problem 13.png" alt="Problem 13"></li>
 </ol>  
 <ul>  
   <details>
     <summary>Solution</summary>
 
 <ol type="a">
-  <li><img src="Images/Logic Gates/Problem 12A.png" alt="Problem 12A"></li>
-  <li><img src="Images/Logic Gates/Problem 13A.png" alt="Problem 13A"></li>
+  <li><img src="Images/Example Problems/Problem 12A.png" alt="Problem 12A"></li>
+  <li><img src="Images/Example Problems/Problem 13A.png" alt="Problem 13A"></li>
 </details>
 </ul>  
 </details>
