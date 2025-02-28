@@ -743,17 +743,17 @@ The flip-flop can hold the value of one or zero, until the clock changes.
 
 The SR flip-flop has three inputs: S, R, and its current output Q(t)
 
-<img src="Images/Logic Gates/SR.png" alt="SR Flip-FLop" width="300" height="150">
+<img src="Images/Logic Gates/SR.png" alt="SR Flip-FLop" width="300" height="100">
 
 ### JK Flip-Flops
 The SR flip-flop can be modified to provide a stable state when S and R inputs are both 1; this modified flip-flop is called a JK flip-flop
 
-<img src="Images/Logic Gates/JK FlIP-FLOP.png" alt="JK Flip-FLop" width="300" height="150">
+<img src="Images/Logic Gates/JK.png" alt="JK Flip-FLop" width="300" height="100">
 
 ### D Flip-Flops
 The D flip-flop is another variant of the SR flip-flop
 
-<img src="Images/Logic Gates/D FlIP-FLOP.png" alt="JK Flip-FLop" width="300" height="150">
+<img src="Images/Logic Gates/D.png" alt="JK Flip-FLop" width="300" height="100">
 
 <details>
     <summary>Example problem</summary>
