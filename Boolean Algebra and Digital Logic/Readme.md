@@ -372,7 +372,7 @@ A logic gate implements a simple boolean operation where a collection of gates f
             </td>
         </tr>
         <tr>
-            <td>XOR</td>
+            <td>XNOR</td>
             <td><img src="Images/Logic Gates/XNOR.png" alt="XNOR Gate Symbol" width="120" height="60"></td>
             <td>
                 <table>
@@ -743,7 +743,7 @@ The flip-flop can hold the value of one or zero, until the clock changes.
 
 The SR flip-flop has three inputs: S, R, and its current output Q(t)
 
-<img src="Images/Logic Gates/SR FlIP-FLOP.png" alt="SR Flip-FLop" width="300" height="150">
+<img src="Images/Logic Gates/SRFlIPFLOP.png" alt="SR Flip-FLop" width="300" height="150">
 
 ### JK Flip-Flops
 The SR flip-flop can be modified to provide a stable state when S and R inputs are both 1; this modified flip-flop is called a JK flip-flop
