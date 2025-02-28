@@ -10,6 +10,9 @@
   <li>
     <a href='#combinational-circuits'>Combinational Circuits</a>
   </li>
+  <li>
+    <a href='#sequential-circuits'>Sequential Circuits</a>
+  </li>
 </ol>
 </details>
 
@@ -103,6 +106,7 @@ Simplify $B1 + (((AD)' + D'C)A)'$
   <details>
     <summary>Solution</summary>
 
+<img src="Images/Example Problems/Problem 11A.png" alt="Problem 11A">
 </details> 
 </ul>  
 </details>
@@ -364,6 +368,18 @@ A logic gate implements a simple boolean operation where a collection of gates f
                     <tr><td>0</td><td>1</td><td>1</td></tr>
                     <tr><td>1</td><td>0</td><td>1</td></tr>
                     <tr><td>1</td><td>1</td><td>0</td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>XOR</td>
+            <td><img src="Images/Logic Gates/XNOR.png" alt="XNOR Gate Symbol" width="120" height="60"></td>
+            <td>
+                <table>
+                    <tr><td>0</td><td>0</td><td>1</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
                 </table>
             </td>
         </tr>
@@ -643,7 +659,7 @@ Draw the decoder $\Pi m(0, 3, 7)$
   <details>
     <summary>Solution</summary>
 
-<img src="Images/Example Problems/Problem 1.png" alt="Problem 5">
+<img src="Images/Example Problems/Problem 1.png" alt="Problem 1">
 </details>
 </ul>  
 </details>
@@ -656,7 +672,7 @@ Draw the decoder $\sum m(2, 4, 6)$
   <details>
     <summary>Solution</summary>
 
-<img src="Images/Example Problems/Problem 1.png" alt="Problem 6">
+<img src="Images/Example Problems/Problem 1.png" alt="Problem 1">
 </details>
 </ul>  
 </details>
@@ -710,6 +726,55 @@ Design a 2 x 1 MUX for $F(a, b) = a'b + ab$
     <summary>Solution</summary>
 
 <img src="Images/Example Problems/Problem 11A.png" alt="Problem 9A">
+</details>
+</ul>  
+</details>
+
+## Sequential Circuits
+### Clocks
+Sequential circuits are updated with a clock which can be rising or falling edge triggered
+
+<img src="Images/Logic Gates/CLOCKS.png" alt="Clocks" width="300" height="150">
+
+### SR Flip-FLops
+SR flip-flops are the most basic sequential logic components. The S and the R stand for set and reset
+
+The flip-flop can hold the value of one or zero, until the clock changes.
+
+The SR flip-flop has three inputs: S, R, and its current output Q(t)
+
+<img src="Images/Logic Gates/SR FlIP-FLOP.png" alt="SR Flip-FLop" width="300" height="150">
+
+### JK Flip-Flops
+The SR flip-flop can be modified to provide a stable state when S and R inputs are both 1; this modified flip-flop is called a JK flip-flop
+
+<img src="Images/Logic Gates/JK FlIP-FLOP.png" alt="JK Flip-FLop" width="300" height="150">
+
+### D Flip-Flops
+The D flip-flop is another variant of the SR flip-flop
+
+<img src="Images/Logic Gates/D FlIP-FLOP.png" alt="JK Flip-FLop" width="300" height="150">
+
+<details>
+    <summary>Example problem</summary>
+
+<ol type="a">
+  <li>
+  
+  Write out the truth table for the future control signal of Q<sub>A</sub>(t + 1) and Q<sub>B</sub>(t + 1) for a given A, B, and X<br />
+  <img src="Images/Logic Gates/Problem 12.png" alt="Problem 12"></li>
+  <li>
+  
+  Write out the truth table for the future control signal of Q<sub>A</sub>(t + 1) and Q<sub>B</sub>(t + 1) for a given A, B, and X<br />
+  <img src="Images/Logic Gates/Problem 13.png" alt="Problem 13"></li>
+</ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li><img src="Images/Logic Gates/Problem 12A.png" alt="Problem 12A"></li>
+  <li><img src="Images/Logic Gates/Problem 13A.png" alt="Problem 13A"></li>
 </details>
 </ul>  
 </details>
