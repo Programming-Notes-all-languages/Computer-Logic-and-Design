@@ -585,6 +585,19 @@ $\equiv P \land Q \quad$ Identity Law
 ### Universal Gates
 NAND and NOR are known as <strong>universal gates</strong> as any boolean function can be constructed using only NAND or only NOR gates
 
+<details>
+    <summary>Example problem</summary>
+
+Using NAND gates, implement the BOolean function F(A, B, C) = AB + BC
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 16A.png" alt="Problem 16A">
+</details>
+</ul>  
+</details>
+
 ## Combinational Circuits
 Digital logic circuits can be categorized as:
 <ul>
@@ -654,12 +667,12 @@ Decoders are used to decode binary information from a set of $n$ inputs to a max
 <details>
     <summary>Example problem</summary>
 
-Draw the decoder $\Pi m(0, 3, 7)$
+Draw the decoder $\Pi M(0, 3, 7)$
 <ul>  
   <details>
     <summary>Solution</summary>
 
-<img src="Images/Example Problems/Problem 1.png" alt="Problem 1">
+<img src="Images/Example Problems/Problem 14A.png" alt="Problem 1">
 </details>
 </ul>  
 </details>
@@ -672,7 +685,7 @@ Draw the decoder $\sum m(2, 4, 6)$
   <details>
     <summary>Solution</summary>
 
-<img src="Images/Example Problems/Problem 1.png" alt="Problem 1">
+<img src="Images/Example Problems/Problem 15A.png" alt="Problem 1">
 </details>
 </ul>  
 </details>
