@@ -252,9 +252,9 @@ Write a RISC-V instructions to allocate stack space and backup the original valu
   <details>
     <summary>Solution</summary>
 
-addi sp, sp, -8
-sw s0, 8(sp)
-sw ra, 4(sp)
+addi sp, sp, -8<br />
+sw s0, 4(sp)<br />
+sw ra, 0(sp)<br />
 </details>
 </ul>  
 </details>
@@ -267,9 +267,45 @@ Write a RISC-V instructions to restore the original values of registers s0 and r
   <details>
     <summary>Solution</summary>
 
-lw s0, 8(sp)
-lw ra, 4(sp)
-addi sp, sp, 8
+lw ra, 0(sp)<br />
+lw s0, 4(sp)<br />
+add sp, sp 8<br />
 </details>
 </ul>  
 </details>
+
+### Saved Registers
+The saved registers range from s0 to s11 where these registers can be saved and restored from the callee function if the callee function modifies the registers' values
+
+<ul>
+  <li>If a function modifies a saved register and restores it before returning, the value remains unchanged outside of the function</li>
+  <li>If a function modifies a saved register and does not restore it, teh value changes outside the function, which is incorrect behavior</li>
+</ul>
+
+Here is an example of how to correctly use the saved registers:
+
+<pre>
+<code class="language-riscv">
+.globl main
+
+main:
+	addi s0, zero 1
+	
+	jal Function
+
+Function:
+	addi sp, sp, -4
+	
+	sw s0, 0(sp)
+	
+	addi s0, s0, 99
+	
+	lw s0, 0(sp)
+	
+	addi sp, sp, 4
+	
+	j Exit
+	
+Exit:
+</code>
+</pre>
