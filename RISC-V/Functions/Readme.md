@@ -269,7 +269,7 @@ Write a RISC-V instructions to restore the original values of registers s0 and r
 
 lw ra, 0(sp)<br />
 lw s0, 4(sp)<br />
-add sp, sp 8<br />
+addi sp, sp, 8<br />
 </details>
 </ul>  
 </details>
@@ -279,8 +279,10 @@ The saved registers range from s0 to s11 where these registers can be saved and 
 
 <ul>
   <li>If a function modifies a saved register and restores it before returning, the value remains unchanged outside of the function</li>
-  <li>If a function modifies a saved register and does not restore it, teh value changes outside the function, which is incorrect behavior</li>
+  <li>If a function modifies a saved register and does not restore it, the value changes outside the function, which is incorrect behavior</li>
 </ul>
+
+The safest way of using the saved registers and most common way to use them is with the stack pointer. To then restore the saved register within the function, use lw, lh, or lb
 
 Here is an example of how to correctly use the saved registers:
 
