@@ -1032,7 +1032,7 @@ Address $\quad \quad \quad$ Data<br />
 <ol type="a">
   <li>Write out the 32-bit hex values in t1 after the following instruction is executed: LBU t1, 0(t0)</li>
   <li>Write out the 32-bit hex values in t2 after the following instruction is executed: LH t2, 1(t0)</li>
-  <li>Write out the 32-bit hex values in t2 after the following instruction is executed: LH t3, -1(t0)</li>
+  <li>Write out the 32-bit hex values in t2 after the following instruction is executed: LW t3, -1(t0)</li>
 </ol>             
 <ul>  
   <details>
