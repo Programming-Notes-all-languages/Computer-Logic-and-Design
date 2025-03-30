@@ -311,3 +311,36 @@ Function:
 Exit:
 </code>
 </pre>
+
+<details>
+    <summary>Example problem</summary>
+
+There are 3 RISC-V assembly functions, named func1, func2, and func3. func1 calls func2 and func2 calls func3. func2 as three passing arguments stored in registers a0, a1, and a2, uses temporary registers t0-t3 and saved registers s4-s6. func3 has two passing arguments stored in registers a0 and a1, respectively. In func2, after the program returns to func2 from func3, the code needs the original values stored in registers t1, a0, and a2 before it calls func2
+
+<ol type="a">
+  <li>Before func2 calls func3, register ra must be backup in the stack of func2</li>
+  <li>Before func2 calls func3, register a0 must be backup in the stack of func2</li>
+  <li>Before func2 calls func3, register a1 must be backup in the stack of func2</li>
+  <li>Before func2 calls func3, register a2 must be backup in the stack of func2</li>
+  <li>Before func2 calls func3, register t0 must be backup in the stack of func2</li>
+  <li>Before func2 calls func3, register t1 must be backup in the stack of func2</li>
+  <li>Registers s4-s6 must be backup in the stack of func2 at the beginning of func2 before it modifies there register's values</li>
+  <li>Registers s0-s3 must be backup in the stack of func2 at the beginning of func2 even though it does not modify these registers' values</li>
+</ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li>True</li>
+  <li>True</li>
+  <li>False</li>
+  <li>True</li>
+  <li>False</li>
+  <li>True</li>
+  <li>True</li>
+  <li>False</li>
+</ol>	
+</details>
+</ul>  
+</details>
