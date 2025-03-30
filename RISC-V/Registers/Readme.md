@@ -335,6 +335,8 @@ t1 = 0xDDCB9000
 + FFFFFA82 
 ----------
   DDCB9A82
+
+So the required steps are: lui t1, 0xDDCBA and addi t1, t1, 0xA82
 </pre>  
 </details>
 </ul>  
@@ -466,6 +468,8 @@ t1 = 0xA123D000
 t1 = 0xA123D000 + 0x000005BD = 0xA123D5BD
 
 Incorrect
+  </pre>
+  </li>
 </ol>
 </details>
 </ul>  
@@ -623,7 +627,7 @@ Incorrect as 18 does not equal 10
 <details>
     <summary>Example problem</summary>
 
-Which of the following RISC-V assembly code snippet correctly implements t1 = t0 * 10.25 without using multiplication and division instructions
+Which of the following RISC-V assembly code snippet correctly implements t1 = 0 without using multiplication and division instructions
 <ol type="a">
   <li>xor t1, t1, t1</li>
   <li>mv t1, x0</li>
@@ -661,28 +665,7 @@ Select all of the following RISC-V assembly instructions that correctly initiali
   <details>
     <summary>Solution</summary>
 
-<ol type="a">
-  <li>
-  <pre>
-t1 = x0 + 25 = 25
-
-Correct 
-  </pre>
-  </li>
-  <li>
-  <pre>
-t1 = 0000 0000 OR 0001 1001 = 25
-
-Correct
-  </pre>
-  </li>
-  <li>This is a pseudo-instruction and therefore incorrect</li>
-  <li>
-  <pre>
-25 = 0001 1001 = 0x00000019<sub>16</sub>
-t1 = 0x00019000
-
-Incorrect
+The answers a and b
 </details>
 </ul>  
 </details>
@@ -701,44 +684,7 @@ Which of the following RISC-V instructions correctly computes t1 = t0 % 256 for 
   <details>
     <summary>Solution</summary>
 
-Assume t1 = 3 and t2 = 3:
-
-<ol type="a">
-  <li>
-  <pre>
-t1 = 3 = 0 0000 0011
-256 = 1 0000 0000  
-3 AND 256 = 0000 0000
-
-Incorrect
-  </pre>
-  </li>
-  <li>
-  <pre>
-t1 = 3 = 0000 0011
-255 = 1111 1111
-
-3 XOR 255 = 1111 1100
-
-Incorrect
-  </pre>
-  </li>
-  <li>
-  <pre>
-t0 = 0000 0011
-This shifted 8 units to the left is: 11 0000 0000
-t1 = 11 0000 0000
-Now, shifting  t1 8 units to the right gives: 0000 0011
-
-Correct for small values; however, for values like 512, this would fail
-  </pre>
-  </li>
-  <li>
-  <pre>
-t0 = 3 = 0000 0011
-t1 = 3 = 0000 0011
-t1 = 3 AND 3 = 0000 0011
-</ol>  
+The correct answer is d
 </details>
 </ul>  
 </details>
@@ -753,6 +699,7 @@ XORI t2, t2, -1
   <details>
     <summary>Solution</summary>
 
+<pre>
 t0 = 1110 0110 1010 1011 1100 1001 1101 0101
 t1 = 1111 0010 0111 1000 0011 0001 1011 1101
 t2 = 0001 0100 1101 0011 1111 1000 0110 1000
@@ -763,6 +710,7 @@ t2 = 0001 0100 1101 0011 1111 1000 0110 1000
 0xF= 1111 1111 1111 1111 1111 1111 1111 1111
 t2 = 1110 1011 0010 1100 0000 0111 1001 0111
 t2 = 0xEB2C0797
+</pre>
 </details>
 </ul>  
 </details>
@@ -781,38 +729,7 @@ Select all of the following RISC-V assembly code snippets that correctly impleme
   <details>
     <summary>Solution</summary>
 
-<ol type="a">
-  <li>Only and, or, and xor are directly supported as native instructions--not nand</li>
-  <li>
-  <pre>
-Suppose t0 = 0110 and t1 = 1101. This nanded is 1011
-t2 = t0 AND t1 = 0100
-t2 = 0100 XOR 1111 = 1011
-
-Suppose t0 = 0001 and t1 = 1000. This nanded is 1111
-t2 = t0 AND t1 = 0000
-t2 = 0000 XOR 1111 = 1111
-
-Correct
-  </pre>
-  </li>
-  <li>
-  <pre>
-Suppose t0 = 0110 and t1 = 1101. This nanded is 1011
-t2 = t0 AND t1 = 0100
-t2 = 0100 OR 1111 = 1111
-
-Incorrect
-  </pre>
-  </li>
-  <li>
-  <pre>
-Suppose t0 = 0110 and t1 = 1101. This nanded is 1011
-t2 = t0 AND t1 = 0100
-t3 = 0 + 1111 = 1111
-t2 = 0100 XOR 1111 = 1011
-
-Correct
+The correct answers are b and d
 </details>
 </ul>  
 </details>
@@ -831,81 +748,7 @@ Which of the following RISC-V instructions correctly computes t1 = t0 % 16 for n
   <details>
     <summary>Solution</summary>
 
-Assume t0 = 
-<ol type="a">
-  <li>Only and, or, and xor are directly supported as native instructions--not nand</li>
-  <li>
-  <pre>
-
-  </pre>
-  </li>
-  <li>
-  <pre>
-Suppose t0 = 0110 and t1 = 1101. This nanded is 1011
-t2 = t0 AND t1 = 0100
-t2 = 0100 OR 1111 = 1111
-
-Incorrect
-  </pre>
-  </li>
-  <li>
-  <pre>
-Suppose t0 = 0110 and t1 = 1101. This nanded is 1011
-t2 = t0 AND t1 = 0100
-t3 = 0 + 1111 = 1111
-t2 = 0100 XOR 1111 = 1011
-
-Correct
-  </pre>
-  </li>
-</details>
-</ul>  
-</details>
-
-<details>
-    <summary>Example problem</summary>
-
-Which of the following RISC-V instructions correctly computes t1 = t0 % 16 for non-negative values of t0?
-<ol type="a">
-  <li>andi t1, t0, 15</li>
-  <li>andi t1, t0, 16</li>
-  <li>srai t1, t0, 4<br />slli t1, t1, 4</li>
-  <li>slli t1, t0, 4<br />srli t1, t1, 4</li>
-</ol>
-<ul>  
-  <details>
-    <summary>Solution</summary>
-
-Assume t0 = 17 and t1 = 1
-<ol type="a">
-  <li>
-  <pre>
-t1 = 17 AND 15
-t1 = 0001 0001 AND 0000 1111 = 0000 0001
-
-Correct
-  </pre>
-  </li>
-  <li>
-  <pre>
-t1 = 17 AND 16
-t1 = 0001 0001 AND 0001 0000 = 0001 0000 = 16
-
-Incorrect
-  </pre>
-  </li>
-  <li>
-  <pre>
-t0 = 0001 0001 shifted four to the right with the sign-bit being zero is: 0000 0001
-t1 = t1 shifted 4 places to the left 0001 0000
-
-Even though this is correct for smaller numbers, this would fail for larger numbers
-  </pre>
-  </li>
-  <li>
-This will only work for very small numbers and therefore this answer is incorrect
-  </li>
-</ol>  
+The correct answer is a
 </details>
 </ul>  
 </details>
@@ -924,31 +767,7 @@ Select all of the following RISC-V assembly code snippets correctly implements t
   <details>
     <summary>Solution</summary>
 
-Assume t0 = 0011 and t1 = 1011. t2 = 0011 NOR 1011 = 0100
-<ol type="a">
-  <li>This is incorrect because nor is a pseudo-instruction</li>
-  <li>
-  <pre>
-t2 = 0011 OR 1011 = 1011
-t2 = 1011 XOR 1111 = 0100
-
-Incorrect
-  </pre>
-  </li>
-  <li>
-  <pre>
-t2 = 0011 OR 1011 = 1011
-li is a pseudo-instruction; therefore, this is incorrect
-  </pre>
-  </li>
-  <li>
-  <pre>
-t2 = 0011 OR 1011 = 1011
-t3 = 0000 + 1111 = 1111
-t2 = 1011 XOR 1111 = 0100
-
-Correct
-</ol>  
+The correct answer is b and d
 </details>
 </ul>  
 </details>
@@ -967,27 +786,7 @@ Which of the following RISC-V assembly instruction correctly initializes t1 to -
   <details>
     <summary>Solution</summary>
 
-<ol type="a">
-  <li>
-  </li>
-  <li>
-  <pre>
-t1 = -59 * 4096
-
-Incorrect
-  </pre>
-  </li>
-  <li>li is a pseudo-instruction; therefore, this answer choice is incorrect
-  </li>
-  <li>
-  <pre>
-t1 = 0 + -59 = -59
-
-Correct
-  </pre>
-  </li>
-  <li>or and ori are not compatible with negative numbers; therefore, it is incorrect</li>
-</ol>  
+The correct answer is c
 </details>
 </ul>  
 </details>
@@ -1061,6 +860,8 @@ The memory address is -1(t0) which is t0 - 1 = 0x100100C0
 Now, since we are loading four bytes of data and since RISC-V is little-endian, the memory addresses are 0x100100C0 - 0x100100C3
 No sign-extension is needed because there are 32 bits of data stored in memory
 0xA59D7B36
+  </pre>
+  </li>
 </ol>
 </details>
 </ul>  
@@ -1080,7 +881,8 @@ Which of the following sequences correctly implements reading Fibonacci values f
 <ul>  
   <details>
     <summary>Solution</summary>
-D
+
+The correct answer is d
 </details>
 </ul>  
 </details>
@@ -1183,8 +985,14 @@ Write the RISC-V instructions to initialize register s0 to 0xDEADBEEF
     <summary>Solution</summary>
 
 <pre>
-lui s0, 0xDEADB
-addi s0, s0, EEF
+    1111
+    DEADC000 
+  + FFFFFEEF
+  ----------
+    DEADBEEF
+
+lui s0, 0xDEADC
+addi s0, s0, 0xEEF
 </pre>
 </details>
 </ul>  
