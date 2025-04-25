@@ -104,7 +104,7 @@ Cache memory can help bridge the CPU-memory gap since cache memory is small in s
   </li>
   <li>Spatial locality
     <ul>
-      <li>Tendency to access contiguous instructions/data in memory<li>
+      <li>Tendency to access contiguous instructions/data in memory</li>
       <li>Sequential execution of instructions</li>
       <li>Traversing arrays element by element</li>
     </ul>
