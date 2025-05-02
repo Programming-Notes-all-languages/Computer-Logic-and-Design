@@ -1,4 +1,3 @@
-
 <details>
 <summary>Table of Contents</summary>
 <ol>
@@ -59,7 +58,7 @@ A nonpipelined system takes 200ns to process a task. The same task can be proces
 <ol>
  <li>
 
- $S$ <sup>k</sup> = $n * k * t$ / $t * (n + k - 1)$ = (200 * 5 * 40) / ((200 + 5 - 1) * 40) = 4.9019</li>
+ $S$ <sup>k</sup> = $n * k * t$ / $t * (n + k - 1)$ = (200 * 200) / ((200 + 5 - 1) * 40) = 4.9019</li>
  <li>
 
  Speedup<sub>max</sub> = $k$ = 5</li>
