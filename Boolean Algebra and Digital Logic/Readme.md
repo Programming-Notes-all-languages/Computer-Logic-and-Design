@@ -8,6 +8,9 @@
     <a href='#logic-gates-and-digital-components'>Logic Gates and Digital Components</a>
   </li>
   <li>
+    <a href='#karnaugh-maps'>Karnaugh Maps</a>
+  </li>
+  <li>
     <a href='#combinational-circuits'>Combinational Circuits</a>
   </li>
   <li>
@@ -594,6 +597,46 @@ Using NAND gates, implement the BOolean function F(A, B, C) = AB + BC
     <summary>Solution</summary>
 
 <img src="Images/Example Problems/Problem 16A.png" alt="Problem 16A">
+</details>
+</ul>  
+</details>
+
+## Karnaugh Maps
+The Karnaugh map is actually nothing more than an extension of the concepts of truth tables, Venn diagrams, and minterms
+
+<details>
+    <summary>Example problem</summary>
+
+<ol type="a">
+  <li>
+  
+  Simplify the Boolean function using a 4-variable K-map:<br>
+  
+  <strong>Function:</strong><br>
+  $F(A,B,C,D) = \Sigma m(0,1,2,5,7,8,9,10,14)$<br />
+  <strong>Don’t cares:</strong><br>
+  $d = \Sigma m(11,15)$
+  <br /></li>
+  <li>
+  <li>
+  Simplify the Boolean function using a 5-variable K-map:<br>
+  
+  <strong>Function:</strong><br>
+  $F(A,B,C,D,E) = \Sigma m(0,1,2,3,8,9,10,11,16,17,18,19,24,25,26,27)$<br />
+  
+  <strong>Don’t cares:</strong><br>
+  $d = \Sigma m(5,7,13,29)$
+  <br />
+</li>
+
+</ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li><img src="Images/Example Problems/Problem 17A.png" alt="Problem 17A"></li>
+  <li><img src="Images/Example Problems/Problem 18A.png" alt="Problem 18A"></li>
 </details>
 </ul>  
 </details>
