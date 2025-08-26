@@ -504,7 +504,7 @@ This process represents how a computer's CPU executes instructions. This cycle i
       <li>The ALU then performs the operation and processes operands from registers or memory. If a result is computed, it is stored in a register or written back to memory</li>
     </ol>
   </li>
-</ul>      
+</ol>      
 
 ### System Bus Model
 The <strong>von Neumann bottleneck</strong> is a single path between the CPU and main memory
