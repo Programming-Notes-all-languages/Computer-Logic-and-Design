@@ -618,7 +618,6 @@ The Karnaugh map is actually nothing more than an extension of the concepts of t
   $d = \Sigma m(11,15)$
   <br /></li>
   <li>
-  <li>
   Simplify the Boolean function using a 5-variable K-map:<br>
   
   <strong>Function:</strong><br>
