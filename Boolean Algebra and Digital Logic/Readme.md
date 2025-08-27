@@ -11,6 +11,9 @@
     <a href='#karnaugh-maps'>Karnaugh Maps</a>
   </li>
   <li>
+    <a href='quine-mccluskey-method'>Quine McCluskey Method</a>
+  </li>
+  <li>
     <a href='#combinational-circuits'>Combinational Circuits</a>
   </li>
   <li>
@@ -639,6 +642,17 @@ The Karnaugh map is actually nothing more than an extension of the concepts of t
 </details>
 </ul>  
 </details>
+
+## Quine McCluskey Method
+The purpose of the <em>Quine McCluskey Method</em> is for minimizing boolean expressions using a tabular method. This method works similar to the Karnaugh maps, but scales better for more than four variables. This method also guarantees finding the minimal sum-of-products form
+
+Steps:
+<ol>
+  <li>Write the Boolean function as a sum of minterms where each minterm is a binary combination</li>
+  <li>Group the minterms by the total number of ones. Example: minterm <code>0101</code> (two 1s) goes into group two</li>
+  <li>Compare the terms from adjacent groups between group N and group N + 1. If the terms differ in exactly one bit, combine them and replace the differing bit with a dash (-). Example: <code>0101</code> and <code>0111</code> -> <code>01-1</code></li>
+  <li>Repeat 
+</ol>
 
 ## Combinational Circuits
 Digital logic circuits can be categorized as:
