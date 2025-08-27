@@ -11,7 +11,7 @@
     <a href='#karnaugh-maps'>Karnaugh Maps</a>
   </li>
   <li>
-    <a href='quine-mccluskey-method'>Quine McCluskey Method</a>
+    <a href='#quine-mccluskey-method'>Quine McCluskey Method</a>
   </li>
   <li>
     <a href='#combinational-circuits'>Combinational Circuits</a>
@@ -607,6 +607,14 @@ Using NAND gates, implement the BOolean function F(A, B, C) = AB + BC
 ## Karnaugh Maps
 The Karnaugh map is actually nothing more than an extension of the concepts of truth tables, Venn diagrams, and minterms
 
+Steps:
+<ol>
+  <li>Set up the K-map. Choose the right K-map size, where two variables is a 2x2 grid, three variables is a 3x3 grid, and four variables is a 4x4 grid. For a 5 variable function, create two 4x4 grids with the first variable equal to zero for one grid and the first variable equal to one for the other grid. Then label the columns with gray cord order: 00, 01, 11, 10. Fill in the K-map with 1s for the minterms where the function is true and Xs for the don't care values</li>
+  <li>Group the 1s. Make groups of 1, 2, 4, 8, ... (always power of 2) where the groups can wrap around the edges of the map. Always try to make the largest possible groups for the most simplified result</li>
+  <li>Extract the simplified terms. Inside of each group, find the variables that stay the same across all cells. These variables form the product term and the variables that change inside the group are eliminated</li>
+  <li>Write the simplified expression. Each group gives one product term and combine all the product terms with or</li>
+</ol>
+
 <details>
     <summary>Example problem</summary>
 
@@ -651,8 +659,37 @@ Steps:
   <li>Write the Boolean function as a sum of minterms where each minterm is a binary combination</li>
   <li>Group the minterms by the total number of ones. Example: minterm <code>0101</code> (two 1s) goes into group two</li>
   <li>Compare the terms from adjacent groups between group N and group N + 1. If the terms differ in exactly one bit, combine them and replace the differing bit with a dash (-). Example: <code>0101</code> and <code>0111</code> -> <code>01-1</code></li>
-  <li>Repeat 
+  <li>Repeat combining until no further reductions are possible. The unused terms are the <em>prime implicants</em></li>
 </ol>
+
+<details>
+    <summary>Example problem</summary>
+
+Minimize the following function using the Quine McCluskey Method: $F(A, B, C) = \sum m(1, 3, 5, 7)$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+Minterms:<br />
+$m1$ = <code>001</code><br />
+$m3$ = <code>011</code><br />
+$m5$ = <code>101</code><br />
+$m7$ = <code>111</code><br />
+
+Group 1: <code>001</code><br />
+Group 2: <code>011</code>, <code>101</code><br />
+Group 3: <code>111</code><br />
+
+Adjacent groups: <code>0-1</code>, <code>-01</code>, <code>-11</code>, <code>1-1</code><br />
+
+Combining adjacent groups: <code>--1</code><br />
+
+Prime implicant: <code>--1</code>
+
+$F(A, B, C) = C$
+</details>
+</ul>  
+</details>
 
 ## Combinational Circuits
 Digital logic circuits can be categorized as:
