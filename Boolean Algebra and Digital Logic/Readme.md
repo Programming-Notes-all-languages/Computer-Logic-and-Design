@@ -1587,7 +1587,55 @@ Digital logic circuits can be categorized as:
   <li>Sequential circuits</li>
 </ul>
 
+### Two-level Circuits
+Input signals must pass through two levels of gates before reaching the output
+
 Combinational logic is used to build circuits that contain basic boolean operators, inputs, and outputs. An output in a combinational circuit is always based entirely on the given inputs
+
+<details>
+    <summary>Example problem</summary>
+
+Design a two-level NAND-NAND circuit for the Boolean expression: $F(A, B, C, D) = AB'C + BD$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+$F(A, B, C, D) = AB'C + BD$<br />
+$F(A, B, C, D) = (AB'C + BD)''$<br />
+$F(A, B, C, D) = ((AB'C)' * (BD)')'$<br />
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Given the following function: 
+
+<div align="center">
+
+$F(W, X, Y, Z) = (W + X)(Y + Z)$
+</div>
+
+<ol type="a">
+  <li>Convert this into a two-level AND-OR form</li>
+  <li>Convert this into a two level OR-AND form</li>
+</ol>
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li>
+  
+$F(W, X, Y, Z) = WY + WZ + XY + XZ$</li>
+  <li>
+
+$F(W, X, Y, Z) = (W + X)(Y + Z)$</li>
+</ol>  
+</details>
+</ul>  
+</details>
 
 ### Half-Adder
 A half-adder is a typical combinational circuit that is used to add two binary digits together
