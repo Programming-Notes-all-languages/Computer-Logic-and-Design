@@ -621,6 +621,130 @@ Steps:
 <ol type="a">
   <li>
   
+  Simplify the Boolean function using a 3-variable K-map:<br>
+  
+  <strong>Function:</strong><br>
+  $F(A,B,C) = \Sigma m(0,1,2,5,7)$</li>
+  <li>
+  Simplify the Boolean function using a 3-variable K-map:<br>
+  
+  <strong>Function:</strong><br>
+  $F(A,B,C) = \Sigma m(0,2,3,5,6)$</li>
+  <li>
+  Simplify the Boolean function using a 3-variable K-map:<br>
+  
+  <strong>Function:</strong><br>
+  $F(A,B,C) = \Sigma m(1,2,4,5,6,7)$</li>
+</ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li>
+  
+<table>
+  <tr>
+    <th>AB \ C</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>00</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>01</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+$F(A,B,C) = C$</li>
+  <li>
+  
+<table>
+  <tr>
+    <th>AB \ C</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>00</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>01</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+$F(A,B,C) = A'B + BC' + BC' + AB'C$</li>
+  <li>
+  
+<table>
+  <tr>
+    <th>AB \ C</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>00</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>01</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+$F(A,B,C) = BC' + B'C + A$</li>
+</ol>
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+<ol type="a">
+  <li>
+  
   Simplify the Boolean function using a 4-variable K-map:<br>
   
   <strong>Function:</strong><br>
@@ -647,6 +771,7 @@ Steps:
 <ol type="a">
   <li><img src="Images/Example Problems/Problem 17A.png" alt="Problem 17A"></li>
   <li><img src="Images/Example Problems/Problem 18A.png" alt="Problem 18A"></li>
+</ol>
 </details>
 </ul>  
 </details>
