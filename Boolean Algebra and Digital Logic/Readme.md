@@ -651,13 +651,13 @@ Steps:
   </tr>
   <tr>
     <th>00</th>
-    <td>0</td>
+    <td>1</td>
     <td>1</td>
   </tr>
   <tr>
     <th>01</th>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
   </tr>
   <tr>
     <th>11</th>
@@ -671,7 +671,7 @@ Steps:
   </tr>
 </table>
 
-$F(A,B,C) = C$</li>
+$F(A,B,C) = A'B' + A'C' + AC$</li>
   <li>
   
 <table>
@@ -771,6 +771,106 @@ $F(A,B,C) = BC' + B'C + A$</li>
 <ol type="a">
   <li><img src="Images/Example Problems/Problem 17A.png" alt="Problem 17A"></li>
   <li><img src="Images/Example Problems/Problem 18A.png" alt="Problem 18A"></li>
+</ol>
+</details>
+</ul>  
+</details>
+
+### Prime Implicants
+<em>Prime implicants</em> are the product terms (AND of variables_ obtained from grouping 1s in a Karnaugh map. It represents the largest possible group, meaning it cannot be combined with other adjacent 1s to make it bigger
+
+### Essential Prime Implicants
+An <em>essential prime implicant</em> is a prime implicant that covers at least one minterm that is not covered by any other prime implicant. These are mandatory to include in the minimized operation
+
+All essential prime implicants are prime implicants; however, not a prime implicants are essential prime implicants
+
+<details>
+    <summary>Example problem</summary>
+
+<ol type="a">
+  <li>
+  
+  Simplify the Boolean function using a 3-variable K-map:<br>
+  
+  <strong>Function:</strong><br>
+  $F(A,B,C) = \Sigma m(0,1,2,5,7)$</li>
+  <li>
+  Simplify the Boolean function using a 3-variable K-map:<br>
+  
+  <strong>Function:</strong><br>
+  $F(A,B,C) = \Sigma m(0,2,3,5,6)$</li>
+</ol>  
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li>
+  
+<table>
+  <tr>
+    <th>AB \ C</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>00</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>01</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+Prime implicants: A'B', AC, A'C", B'C<br />
+Essential prime implicants: AC + A'C'<br />
+$F(A,B,C) = A'B' + AC + A'C'$<br /></li>
+  <li>
+  
+<table>
+  <tr>
+    <th>AB \ C</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>00</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>01</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+Prime Implicants: A'C', AB'C, BC', A'B<br />
+Essential Prime Implicants: A'C', AB'C, BC', A'B<br /> 
+$F(A,B,C) = A'B + BC' + BC' + AB'C$</li>
 </ol>
 </details>
 </ul>  
