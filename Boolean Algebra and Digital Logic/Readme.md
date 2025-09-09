@@ -1034,7 +1034,7 @@ $F(A, B, C) = C$
 <details>
     <summary>Example problem</summary>
 
-Minimize the following function using the Quine McCluskey Method: $F(A, B, C) = \sum m(0, 1, 2, 5, 6, 7, 8, 9 ,10, 14)$
+Minimize the following function using the Quine McCluskey Method: $F(A, B, C, D) = \sum m(0, 1, 2, 5, 6, 7, 8, 9 ,10, 14)$
 <ul>  
   <details>
     <summary>Solution</summary>
@@ -1069,6 +1069,11 @@ Group A1:
     <tr>
       <td>1</td>
       <td>0001</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0010</td>
       <td>→</td>
     </tr>
   </tbody>
@@ -1512,6 +1517,386 @@ The second row prime implicant (5, 7) has a larger number of Xs than any other r
 All extracted essential prime implicants: <code>-00-</code>, <code>--10</code>, <code>01-1</code>
 
 Minimal Quine-McCluskey Expression: $F(A, B, C, D) = B'C' + CD' + A'BD$
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Minimize the following function using the Quine McCluskey Method: $F(A, B, C, D) = \sum m(0, 1, 2, 4, 6, 8, 9 ,11, 13, 15)$
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+Minterms:<br />
+$m0$ = <code>0000</code><br />
+$m1$ = <code>0001</code><br />
+$m2$ = <code>0010</code><br />
+$m4$ = <code>0100</code><br />
+$m6$ = <code>0110</code><br />
+$m8$ = <code>1000</code><br />
+$m9$ = <code>1001</code><br />
+$m11$ = <code>1011</code><br />
+$m13$ = <code>1101</code><br />
+$m15$ = <code>1111</code><br />
+
+Group A1:
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0000</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group A2:
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0001</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0010</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>0100</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1000</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group A3:
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6</td>
+      <td>0110</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>1001</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group A4:
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11</td>
+      <td>1011</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>1101</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group A5:
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15</td>
+      <td>1111</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group B1 (A1, A2): 
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0, 1</td>
+      <td>000-</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>0, 2</td>
+      <td>00-0</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>0, 4</td>
+      <td>0-00</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>0, 8</td>
+      <td>-000</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+Group B2 (A2, A3):
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1, 9</td>
+      <td>-001</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>2, 6</td>
+      <td>0-10</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>4, 6</td>
+      <td>01-0</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>8, 9</td>
+      <td>100-</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group B3 (A3, A4):
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9, 11</td>
+      <td>10-1</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>9, 13</td>
+      <td>1-01</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group B4 (A4, A5):
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11, 15</td>
+      <td>1-11</td>
+      <td>→</td>
+    </tr>
+    <tr>
+      <td>13, 15</td>
+      <td>11-1</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group C1 (B1, B2):
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0, 2, 4, 6</td>
+      <td>0--0</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <td>0, 1, 8, 9</td>
+      <td>-00-</td>
+      <td>✓</td>
+    </tr>
+  </tbody>
+</table>
+
+Group C2 (B2, B3):
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2, 6, 9, 13</td>
+      <td>--01</td>
+      <td>→</td>
+    </tr>
+  </tbody>
+</table>
+
+Group C3 (B3, B4):
+<table>
+  <thead>
+    <tr>
+      <th>Pair (Decimal)</th>
+      <th>Binary</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9, 11, 13, 15</td>
+      <td>1--1</td>
+      <td>✓</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prime Implicant</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>4</th>
+      <th>6</th>
+      <th>8</th>
+      <th>9</th>
+      <th>11</th>
+      <th>13</th>
+      <th>15</th>
+      <th>Variables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0, 1, 8, 9</td>
+      <td>X</td>
+      <td>X</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>X</td>
+      <td>X</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>-00-</td>
+    </tr>
+    <tr>
+      <td>0, 2, 4, 6</td>
+      <td>X</td>
+      <td></td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>0--0</td>
+    </tr>
+    <tr>
+      <td>9, 11, 13, 15</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>1--1</td>
+    </tr>
+  
+  </tbody>
+</table>
+
+Columns 1, 2, 4, 6, 8, 11, 13, and 15 have only a single X, so the essential prime implicants are (0, 1, 8, 9), (0, 2, 4, 6), and (9, 11, 13, 15). Now remove the prime implicant rows corresponding to minterm column 1, 2, 4, 6, 8, 11, 13, and 15
+
+Doing that leaves no more prime implicants; therefore, the prime implicants above are essential prime implicants
+
+All extracted essential prime implicants: <code>-00-</code>, <code>0--0</code>, <code>1--1</code>
+
+Minimal Quine-McCluskey Expression: $F(A, B, C, D) = B'C' + A'D' + AD$
 </details>
 </ul>  
 </details>
