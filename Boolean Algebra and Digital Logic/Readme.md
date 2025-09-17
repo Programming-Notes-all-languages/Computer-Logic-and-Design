@@ -2247,6 +2247,167 @@ $F(W, X, Y, Z) = (W + X)(Y + Z)$</li>
 </ul>  
 </details>
 
+<details>
+    <summary>Example problem</summary>
+
+Given the following function: 
+
+<div align="center">
+
+$F(x, y, z) = \sum m(0, 1, 4, 5, 6)$
+</div>
+
+<ol type="a">
+  <li>Design an AND-OR realization for the function above</li>
+  <li>Design a NAND-NAND realization for the function above</li>
+  <li>Design a OR-AND realization for the function above</li>
+  <li>Design a NOR-NOR realization for the function above</li>
+</ol>
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<ol type="a">
+  <li>
+  
+<table>
+  <tr>
+    <th>AB \ C</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>00</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>01</th>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+$F = Y' + XZ'$
+</li>
+  <li>
+
+$F = ((Y' + XZ')')'$<br />
+$F = ((Y')' * (XZ')')'$<br />
+$F = (Y * (XZ')')'$<br />
+</li>
+<li>
+
+<table>
+  <tr>
+    <th>AB \ C</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>00</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <th>01</th>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>11</th>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>10</th>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+$F = (X + Y')(Y' + Z')$
+</li>
+<li>
+
+$F = (((X + Y')(Y' + Z'))')'$<br />
+$F = ((X + Y')' + (Y' + Z')')'$<br />
+</li>
+</ol>  
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Given the following function: 
+
+<div align="center">
+
+$F(A, B, C, D) = \sum m(1, 2, 3, 5, 6, 7, 8, 9, 12, 14)$
+</div>
+
+Design a NOR-only circuit for the following logic function
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<table border="1" cellpadding="10">
+      <tr>
+        <th>AB \ CD</th>
+        <th>00</th>
+        <th>01</th>
+        <th>11</th>
+        <th>10</th>
+      </tr>
+      <tr>
+        <th>00</th>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>01</th>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>11</th>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </table>
+
+$F = (A + C + D)(A' + B' + D')(A' + B + C')$<br />
+$F = (((A + C + D)(A' + B' + D')(A' + B + C'))')'$<br />
+$F = ((A + C + D)' + (A' + B' + D')' + (A' + B + C')')'$<br />
+</details>
+</ul>  
+</details>
+
 ### Half-Adder
 A half-adder is a typical combinational circuit that is used to add two binary digits together
 
