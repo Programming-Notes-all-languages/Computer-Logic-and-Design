@@ -777,12 +777,12 @@ $F(A,B,C) = BC' + B'C + A$</li>
 </details>
 
 ### Prime Implicants
-<em>Prime implicants</em> are the product terms (AND of variables_ obtained from grouping 1s in a Karnaugh map. It represents the largest possible group, meaning it cannot be combined with other adjacent 1s to make it bigger
+<em>Prime implicants</em> are the product terms (AND of variables) obtained from grouping 1s in a Karnaugh map. It represents the largest possible group, meaning it cannot be combined with other adjacent 1s to make it bigger
 
 ### Essential Prime Implicants
 An <em>essential prime implicant</em> is a prime implicant that covers at least one minterm that is not covered by any other prime implicant. These are mandatory to include in the minimized operation
 
-All essential prime implicants are prime implicants; however, not a prime implicants are essential prime implicants
+All essential prime implicants are prime implicants; however, not all prime implicants are essential prime implicants
 
 <details>
     <summary>Example problem</summary>
@@ -835,7 +835,7 @@ All essential prime implicants are prime implicants; however, not a prime implic
   </tr>
 </table>
 
-Prime implicants: A'B', AC, A'C", B'C<br />
+Prime implicants: A'B', AC, A'C', B'C<br />
 Essential prime implicants: AC + A'C'<br />
 $F(A,B,C) = A'B' + AC + A'C'$<br /></li>
   <li>
