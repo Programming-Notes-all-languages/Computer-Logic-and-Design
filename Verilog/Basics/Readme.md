@@ -215,9 +215,46 @@ endmodule
   </li>
   <li>
 
+For A = 0 and B = 0, if C = 0, f is 1; otherwise, if C = 1, f is 1. f then equals 1 for minterms 0 and 1
+
+For A = 0 and B = 1, if C = 0, f is 0; otherwise, if C = 1, f is 0. f then equals 0 for minterms 2 and 3
+
+For A = 1 and B = 0, if C = 0, f is 1; otherwise, if C = 1, f is 1. f then equals 1 for minterms 4 and 5
+
+For A = 1 and B = 1, if C = 0, f is 0; otherwise, if C = 1, f is 1. f then equals C for minterms 6 and 7
+
 $f = ab' + b' + b'c + ac$
 $f = b' + ac$
-Minterms are: 0, 1, 
+Minterms are: 0, 1, 4, 5, 7
+
+```verilog
+module mux41 (
+    input wire A,
+    input wire B,
+    input wire C,
+    output reg f
+);
+
+    wire D0, D1, D2, D3;
+
+    assign D0 = 1;
+    assign D1 = 0;
+    assign D2 = 1;
+    assign D3 = C;
+
+    always @(*) begin
+        if (A == 0 && B == 0)
+            f = D0;
+        else if (A == 0 && B == 1)
+            f = D1;
+        else if (A == 1 && B == 0)
+            f = D2;
+        else
+            f = D3;
+    end
+endmodule
+```
+  </li>
 </ol>
 </details>
 </ul>  
