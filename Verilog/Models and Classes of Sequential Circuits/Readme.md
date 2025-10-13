@@ -16,6 +16,57 @@ There are two models: the Moore Model and the Mealy Model
 ### Moore Model
 The Moore Model has an output that depends on current state only
 
+Here is a sample Moore Machine Model in Verilog:
+
+```verilog
+module mooreFSM (
+    input clk, reset, x,
+    output reg y
+);
+
+    parameter A = 2'b00, B = 2'b01, C = 2'b10, D = 2'b11;
+
+    reg [1:0] state, next_state;
+
+    always @(posedge clk) begin
+        if (reset)
+            state <= A;
+        else
+            state <= next_state;
+    end
+
+    always @(*) begin
+        case (state)
+            A: if (x == 0)
+                  next_state = C;
+               else
+                  next_state = B;
+            B: if (x == 0)
+                  next_state = A;
+               else
+                  next_state = B;
+            C: if (x == 0)
+                  next_state = D;
+               else
+                  next_state = C;
+            D: if (x == 0)
+                  next_state = B;
+               else
+                  next_state = C;
+            default: next_state = A;
+        endcase
+    end
+
+    always @(*) begin
+        case (state)
+            A, B, D: y = 0;
+            C: y = 1;
+            default: y = 0;
+        endcase
+    end
+endmodule         
+```
+
 <details>
     <summary>Example problem</summary>
 
@@ -66,6 +117,63 @@ The Moore Model has an output that depends on current state only
 
 ### Mealy Model
 The Mealy Model has an output that depends on current state and inputs
+
+Here is a sample Mealy Machine Model in Verilog:
+
+```verilog
+module mooreFSM (
+    input clk, reset, x,
+    output reg y
+);
+
+    parameter A = 2'b00, B = 2'b01, C = 2'b10, D = 2'b11;
+
+    reg [1:0] state, next_state;
+
+    always @(posedge clk) begin
+        if (reset)
+            state <= A;
+        else
+            state <= next_state;
+    end
+
+    always @(*) begin
+        case (state)
+            A: begin
+                if (x == 0)
+                    next_state = D;
+                    y = 1;
+                else
+                    next_state = B;
+                    y = 0;
+            B: begin
+                if (x == 0)
+                    next_state = D;
+                    y = 1;
+                else
+                    next_state = C;
+                    y = 0;
+            C: begin
+                if (x == 0)
+                    next_state = D;
+                    y = 1;
+                else
+                    next_state = A;
+                    y = 0;
+            D: begin
+                if (x == 0)
+                    next_state = B;
+                    y = 1;
+                else
+                    next_state = C;
+                    y = 0;
+            default:
+                next_state = A;
+                y = 0;
+        endcase
+    end
+endmodule         
+```
 
 <details>
     <summary>Example problem</summary>
