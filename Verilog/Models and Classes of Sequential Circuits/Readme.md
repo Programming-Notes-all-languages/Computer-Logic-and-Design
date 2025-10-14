@@ -70,7 +70,7 @@ endmodule
 <details>
     <summary>Example problem</summary>
 
-<img src="Images/Example Problems/Problem 1.png" alt="Problem 1">
+<img src="Images/Problem 1.png" alt="Problem 1">
 <ul>  
   <details>
     <summary>Solution</summary>
@@ -178,7 +178,7 @@ endmodule
 <details>
     <summary>Example problem</summary>
 
-<img src="Images/Example Problems/Problem 2.png" alt="Problem 2">
+<img src="Images/Problem 2.png" alt="Problem 2">
 <ul>  
   <details>
     <summary>Solution</summary>
