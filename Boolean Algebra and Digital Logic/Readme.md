@@ -2559,10 +2559,16 @@ The SR flip-flop has three inputs: S, R, and its current output Q(t)
 
 <img src="Images/Logic Gates/SR.png" alt="SR Flip-FLop" width="300" height="100">
 
+#### Equation for Q (Next)
+$Q$ <sup>+</sup> = $S + R'Q$
+
 ### JK Flip-Flops
 The SR flip-flop can be modified to provide a stable state when S and R inputs are both 1; this modified flip-flop is called a JK flip-flop
 
 <img src="Images/Logic Gates/JK.png" alt="JK Flip-FLop" width="300" height="100">
+
+#### Equation for Q (Next)
+$Q$ <sup>+</sup> = $JQ' + K'Q$
 
 ### D Flip-Flops
 The D flip-flop is another variant of the SR flip-flop
@@ -2592,3 +2598,161 @@ The D flip-flop is another variant of the SR flip-flop
 </details>
 </ul>  
 </details>
+
+Latches are digital circuits that sotre a single bit of information and hold its value until it is updated by a new signal. Latches that are controlled by a clock transition are flip-flops
+
+#### Equation for Q (Next)
+$Q$ <sup>+</sup> = $D$
+
+### SR Latches
+The set-reset latches are the simpliest form of latches and are implemented using two inputs: S (set) and R (reset). The S input sets the output to 1, while the R input resets the output to 0. When both S and R inputs are at 1, the latch is said to be in an undefined state
+
+<h4>SR Latch Truth Table (NOR implementation)</h4>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>S (Set)</th>
+        <th>R (Reset)</th>
+        <th>Q (Next)</th>
+        <th>Q&#x27; (Complement)</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>Latch (no change)</td>
+        <td>Latch (no change)</td>
+        <td>Hold previous state</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>Reset (force Q = 0)</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>Set (force Q = 1)</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>Invalid (both outputs 0 for NOR SR latch)</td>
+      </tr>
+    </tbody>
+  </table>
+
+#### Equation for Q (Next)
+$Q$ <sup>+</sup> = $S + R'Q$
+
+  <h4>SR Latch Truth Table (NAND implementation)</h4>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr>
+        <th>S (Set)</th>
+        <th>R (Reset)</th>
+        <th>Q (Next)</th>
+        <th>Q&#x27; (Complement)</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td>Latch (no change)</td>
+        <td>Latch (no change)</td>
+        <td>Hold previous state</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>Set (force Q = 1)</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>Reset (force Q = 0)</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>Invalid</td>
+        <td>Invalid</td>
+        <td>Both outputs 1 (invalid state)</td>
+      </tr>
+    </tbody>
+  </table>
+
+### Gated SR Latches
+The gated SR latch adds an enable input to the basic SR latch
+
+<ul>
+  <li>When E = 0, the latch ignores S and R (it holds its previous state)</li>
+  <li>When E = 1, the latch behaves like a normal SR latch. It responds to S and R to set, reset, or hold</li>
+</ul>
+
+<h4>Gated SR Latch Truth Table</h4>
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>E (Enable)</th>
+    <th>S</th>
+    <th>R</th>
+    <th>Q(next)</th>
+    <th>Q′(next)</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>0</td><td>X</td><td>X</td><td>Q</td><td>Q′</td><td>Latch (no change)</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>0</td><td>Q</td><td>Q′</td><td>Hold previous state</td>
+  </tr>
+  <tr>
+    <td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>Set</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>Reset</td>
+  </tr>
+  <tr>
+    <td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td><b>Invalid</b></td>
+  </tr>
+</table>
+
+### Gated D Latches
+D latches are similar to SR latches with some modifications made. Here, the inputs are complements of each other
+
+<h4>Gated D Latch Truth Table</h4>
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>E (Enable)</th>
+    <th>D</th>
+    <th>Q(next)</th>
+    <th>Q′(next)</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>0</td><td>X</td><td>Q</td><td>Q′</td><td>Latch (hold previous state)</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>0</td><td>1</td><td>Reset</td>
+  </tr>
+  <tr>
+    <td>1</td><td>1</td><td>1</td><td>0</td><td>Set</td>
+  </tr>
+</table>
+
+#### Equation for Q (Next)
+$Q$ <sup>+</sup> = $ED + E'Q$ 
