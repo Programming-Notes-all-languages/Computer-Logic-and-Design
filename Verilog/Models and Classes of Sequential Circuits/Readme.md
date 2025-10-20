@@ -139,28 +139,28 @@ module mooreFSM (
 
     always @(*) begin
         case (state)
-            A: begin
+            A: 
                 if (x == 0)
                     next_state = D;
                     y = 1;
                 else
                     next_state = B;
                     y = 0;
-            B: begin
+            B: 
                 if (x == 0)
                     next_state = D;
                     y = 1;
                 else
                     next_state = C;
                     y = 0;
-            C: begin
+            C: 
                 if (x == 0)
                     next_state = D;
                     y = 1;
                 else
                     next_state = A;
                     y = 0;
-            D: begin
+            D: 
                 if (x == 0)
                     next_state = B;
                     y = 1;
@@ -219,3 +219,24 @@ endmodule
 </details> 
 </ul>  
 </details>
+
+## Shifter Implementation
+The code below is the implementation for a 8-bit left and right shifter
+
+```verilog
+module shifter (
+    input [7:0] A,
+    input [1:0] sel,
+    output reg [7:0] Y
+);
+    always @(*) begin
+        case(sel)
+            2'b00: Y = A;
+            2'b01: Y = A << 1; //shift left
+            2'b10: Y = A >> 1; //shift right
+            2'b11: Y = {A[6:0], A[7]};
+            default: Y = 8'b0;
+        endcase
+    end
+endmodule
+```

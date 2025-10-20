@@ -513,3 +513,78 @@ end
 ```
 
 <code>for</code> loops are synthesizable
+
+<details>
+    <summary>Example problem</summary>
+
+Given 
+
+<div align="center">
+
+Y = (A + B)' * C
+</div>
+
+Write a module that defines this function in Verilog using only NAND gates
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+$Y = ((A'B'C)')'$
+
+```verilog
+module NANDonly(
+    input A, B, C,
+    output Y
+);
+    wire n1, n2, n3;
+
+    nand(n1, A, A);
+    nand(n2, B, B);
+    nand(n3, n1, n2, C);
+    nand(Y, n3, n3);
+
+endmodule
+```
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
+Given 
+
+<div align="center">
+
+Y = (A + B)' + (C * D)'
+</div>
+
+Write a module that defines this function in Verilog using only NOR gates
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+$Y = (A + B)' + (C * D)'$
+
+$Y = (A + B)' + ((C' + D')')'$
+
+```verilog
+module NORonly(
+    input A, B, C, D,
+    output Y
+);
+    wire n1, n2, n3;
+
+    nor(n1, A, B);
+    nor(n2, C, C);
+    nor(n3, D, D);
+    nor(n4, n2, n3);
+    nor(n5, n4, n4);
+    nor(n6, n1, n5);
+    nor(n7, n6, n6);
+
+endmodule
+```
+</details>
+</ul>  
+</details>

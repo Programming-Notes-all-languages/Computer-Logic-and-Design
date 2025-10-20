@@ -2696,6 +2696,31 @@ $Q$ <sup>+</sup> = $S + R'Q$
     </tbody>
   </table>
 
+Here is the Verilog implementation for a SR latch in NOR representation:
+
+```verilog
+module SRlatch (
+    input wire S,
+    input wire R,
+    input wire CLK,
+    output reg Q
+);
+
+    always @(*) begin
+        if (CLK) begin
+            if (S == 0 && R == 0)
+                Q = Q;
+            else if (S == 1 && R == 0)
+                Q = 1;
+            else if (S == 0 && R == 1)
+                Q = 0;
+            else
+                Q = -1;
+        end
+    end
+endmodule
+```
+
 ### Gated SR Latches
 The gated SR latch adds an enable input to the basic SR latch
 
