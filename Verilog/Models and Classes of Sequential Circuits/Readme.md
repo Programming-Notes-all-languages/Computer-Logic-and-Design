@@ -121,7 +121,7 @@ The Mealy Model has an output that depends on current state and inputs
 Here is a sample Mealy Machine Model in Verilog:
 
 ```verilog
-module mooreFSM (
+module mealyeFSM (
     input clk, reset, x,
     output reg y
 );
