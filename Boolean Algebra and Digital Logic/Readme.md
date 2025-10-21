@@ -2526,6 +2526,23 @@ Design a 2 x 1 MUX for $F(a, b) = a'b + ab$
 <details>
     <summary>Example problem</summary>
 
+Implement a 16-to-1 MUX using only:
+<ol type="a">
+  <li>8-to-1 MUXes</li>
+  <li>4-to-1 MUXes</li>
+</ol>
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Example Problems/Problem 19A.png" alt="Problem 19A">
+</details>
+</ul>  
+</details>
+
+<details>
+    <summary>Example problem</summary>
+
 <ol>
   <li>
   

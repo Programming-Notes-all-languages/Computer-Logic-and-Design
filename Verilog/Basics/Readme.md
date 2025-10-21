@@ -339,6 +339,68 @@ end
 //The block pauses until the condition (enable) evaluates to true. When that happens, it executes that next statement (x = y)
 ```
 
+### 2-Input NOR Implementation 
+
+$F = (a + b + c)'$
+
+#### Structural Verilog
+
+```verilog
+module NOR (
+    input a, b, c
+    output F
+);
+    wire N1, N2;
+
+    nor G1 (N1, a, b);
+    nor G2 (N2, N1, c);
+    nor G3 (F, N2, N2);
+
+endmodule
+```
+
+#### Behavioral Verilog
+
+```verilog
+module NOR (
+    input a, b, c
+    output F
+);
+    assign F = ~(A | B | C);
+endmodule
+```
+
+### 2-Input NAND Implementation 
+
+$F = (abc)'$
+
+#### Structural Verilog
+
+```verilog
+module NAND (
+    input a, b, c
+    output F
+);
+    wire N1, N2;
+
+    nand G1 (N1, a, b);
+    nand G2 (N2, N1, c);
+    nand G3 (F, N2, N2);
+
+endmodule
+```
+
+#### Behavioral Verilog
+
+```verilog
+module NAND (
+    input a, b, c
+    output F
+);
+    assign F = ~(a & b & c);
+endmodule
+```
+
 ## Conditional Logic
 ### <code>if-else</code> Statements
 Here is the syntax for conditional logic in Verilog
