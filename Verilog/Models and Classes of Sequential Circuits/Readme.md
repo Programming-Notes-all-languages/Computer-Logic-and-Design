@@ -232,9 +232,8 @@ module shifter (
     always @(*) begin
         case(sel)
             2'b00: Y = A;
-            2'b01: Y = A << 1; //shift left
-            2'b10: Y = A >> 1; //shift right
-            2'b11: Y = {A[6:0], A[7]};
+            2'b01: Y = A << shiftAmount; //shift left
+            2'b10: Y = A >> shiftAmount; //shift right
             default: Y = 8'b0;
         endcase
     end
