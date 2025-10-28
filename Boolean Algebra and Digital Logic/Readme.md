@@ -2798,3 +2798,30 @@ D latches are similar to SR latches with some modifications made. Here, the inpu
 
 #### Equation for Q (Next)
 $Q$ <sup>+</sup> = $ED + E'Q$ 
+
+### T Flip-Flops
+<h4>T Flip-Flop Truth Table</h4>
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>T</th>
+    <th>Q (current)</th>
+    <th>Q(next)</th>
+    <th>Q′(next)</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>0</td><td>0</td><td>0</td><td>1</td><td>Hold (no change)</td>
+  </tr>
+  <tr>
+    <td>0</td><td>1</td><td>1</td><td>0</td><td>Hold (no change)</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>1</td><td>0</td><td>Toggle (0 → 1)</td>
+  </tr>
+  <tr>
+    <td>1</td><td>1</td><td>0</td><td>1</td><td>Toggle (1 → 0)</td>
+  </tr>
+</table>
+
+#### Equation for Q (Next)
+$Q$ <sup>+</sup> = $T \oplus Q$
