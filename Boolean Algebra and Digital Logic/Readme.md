@@ -2567,6 +2567,15 @@ Sequential circuits are updated with a clock which can be rising or falling edge
 
 <img src="Images/Logic Gates/CLOCKS.png" alt="Clocks" width="300" height="150">
 
+#### Rising Clock Edge Triggered Element
+A circuit that is updated with a clock that is rising edge triggered is represented with at right triagnle with no circile
+
+#### Falling Clock Edge Triggered Element
+A circuit that is updated with a clock that is falling edge triggered is represented with a right triangle with a circile
+
+#### Gated Flip-Flops
+A circuit that is gated is updated whenever the clock is equal to 1
+
 ### SR Flip-FLops
 SR flip-flops are the most basic sequential logic components. The S and the R stand for set and reset
 
@@ -2615,6 +2624,33 @@ The D flip-flop is another variant of the SR flip-flop
 </details>
 </ul>  
 </details>
+
+### T Flip-Flops
+<h4>T Flip-Flop Truth Table</h4>
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>T</th>
+    <th>Q (current)</th>
+    <th>Q(next)</th>
+    <th>Q′(next)</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>0</td><td>0</td><td>0</td><td>1</td><td>Hold (no change)</td>
+  </tr>
+  <tr>
+    <td>0</td><td>1</td><td>1</td><td>0</td><td>Hold (no change)</td>
+  </tr>
+  <tr>
+    <td>1</td><td>0</td><td>1</td><td>0</td><td>Toggle (0 → 1)</td>
+  </tr>
+  <tr>
+    <td>1</td><td>1</td><td>0</td><td>1</td><td>Toggle (1 → 0)</td>
+  </tr>
+</table>
+
+#### Equation for Q (Next)
+$Q$ <sup>+</sup> = $T \oplus Q$
 
 Latches are digital circuits that sotre a single bit of information and hold its value until it is updated by a new signal. Latches that are controlled by a clock transition are flip-flops
 
@@ -2798,30 +2834,3 @@ D latches are similar to SR latches with some modifications made. Here, the inpu
 
 #### Equation for Q (Next)
 $Q$ <sup>+</sup> = $ED + E'Q$ 
-
-### T Flip-Flops
-<h4>T Flip-Flop Truth Table</h4>
-<table border="1" cellspacing="0" cellpadding="6">
-  <tr>
-    <th>T</th>
-    <th>Q (current)</th>
-    <th>Q(next)</th>
-    <th>Q′(next)</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>0</td><td>0</td><td>0</td><td>1</td><td>Hold (no change)</td>
-  </tr>
-  <tr>
-    <td>0</td><td>1</td><td>1</td><td>0</td><td>Hold (no change)</td>
-  </tr>
-  <tr>
-    <td>1</td><td>0</td><td>1</td><td>0</td><td>Toggle (0 → 1)</td>
-  </tr>
-  <tr>
-    <td>1</td><td>1</td><td>0</td><td>1</td><td>Toggle (1 → 0)</td>
-  </tr>
-</table>
-
-#### Equation for Q (Next)
-$Q$ <sup>+</sup> = $T \oplus Q$
