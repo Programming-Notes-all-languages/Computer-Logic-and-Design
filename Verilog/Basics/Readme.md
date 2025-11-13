@@ -271,6 +271,33 @@ module MUX81(
 </ul>  
 </details>
 
+<details>
+    <summary>Example problem</summary>
+
+Determine the output of the following code. Assume that initially a=0010, b=1101, c=1000, x=1111, y=0000, and z=0000
+
+<ol type="a">
+<li>always @ ( posedge clk ) begin<br />
+x <= a & b ;<br />
+y <= x | c ;<br />
+z <= x & y ;<br />
+end</li>
+<li>>always @ ( posedge clk ) begin<br />
+x = a & b ;<br />
+y = x | c ;<br />
+z = x & y ;<br />
+end</li>
+</ol>
+
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Problem 1A.png" alt="Problem 1A"></li>
+</details>
+</ul>  
+</details>
+
 ### <code>initial</code> and <code>always</code> Blocks
 
 #### <code>initial</code> Block

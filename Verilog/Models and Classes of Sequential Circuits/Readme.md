@@ -115,6 +115,31 @@ endmodule
 </ul>  
 </details>
 
+<details>
+    <summary>Example problem</summary>
+Determine the reduced state table for the following:
+
+| State | X=0 → | X=1 → | Output |
+| :---: | :---: | :---: | :----: |
+| **a** |   d   |   c   |    0   |
+| **b** |   f   |   h   |    0   |
+| **c** |   e   |   d   |    1   |
+| **d** |   a   |   e   |    0   |
+| **e** |   c   |   a   |    1   |
+| **f** |   f   |   b   |    1   |
+| **g** |   b   |   h   |    0   |
+| **h** |   c   |   g   |    1   |
+
+<ul>  
+  <details>
+    <summary>Solution</summary>
+
+<img src="Images/Problem 3A.png" alt="Problem 3A">
+</details> 
+</ul>  
+</details>
+
+
 ### Mealy Model
 The Mealy Model has an output that depends on current state and inputs
 
@@ -194,28 +219,110 @@ endmodule
 
   <tr>
     <td>A</td>
-    <td>A</td>
     <td>B</td>
-    <td>0</td>
-    <td>0</td>
+    <td>C</td>
+    <td>1</td>
+    <td>1</td>
   </tr>
 
   <tr>
     <td>B</td>
-    <td>A</td>
-    <td>C</td>
-    <td>0</td>
-    <td>0</td>
-  </tr>
-
-  <tr>
-    <td>C</td>
-    <td>A</td>
+    <td>B</td>
     <td>C</td>
     <td>0</td>
     <td>1</td>
   </tr>
+
+  <tr>
+    <td>C</td>
+    <td>A</td>
+    <td>B</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
 </table>
+
+| Q1Q0 | x | Q1⁺Q0⁺ |
+| ---- | - | ------ |
+| 00   | 0 | 01     |
+| 00   | 1 | 10     |
+| 01   | 0 | 01     |
+| 01   | 1 | 10     |
+| 10   | 0 | 00     |
+| 10   | 1 | 01     |
+
+D1 = Q1+, D0 = Q0+
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Q1Q0 \ x</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+
+  <tr>
+    <td>00</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+
+  <tr>
+    <td>01</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+
+  <tr>
+    <td>11</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+
+D1 = xQ1'
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Q1Q0 \ x</th>
+    <th>0</th>
+    <th>1</th>
+  </tr>
+
+  <tr>
+    <td>00</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+
+  <tr>
+    <td>01</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+
+  <tr>
+    <td>11</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+</table>
+
+D0 = Q1'x' + Q1x
+
+D = Q1'x' + Q1x + Q1'x
+
 </details> 
 </ul>  
 </details>
