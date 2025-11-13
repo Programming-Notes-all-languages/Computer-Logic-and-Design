@@ -203,7 +203,7 @@ endmodule
 <details>
     <summary>Example problem</summary>
 
-<img src="Images/Problem 2.png" alt="Problem 2">
+<img src="Images/Problem 4.png" alt="Problem 4">
 <ul>  
   <details>
     <summary>Solution</summary>
